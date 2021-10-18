@@ -1,108 +1,302 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Picture of deployed project ](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/WriteUpPics/historyBeoreOrAfter.png)
 
-Welcome USER_NAME,
+# [Claims Corner]https://github.com/whatnote/ClaimsCorner) - Milestone Project Three
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Table of Contents
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+- [**About**](#About)
+- [**UX**](#UX)
+  - [User Stories](#User-Stories)
+  - [Research](#Research)
+  - [Styling](#Styling)
+  - [Wireframes](#Wireframes)
+- [**Features**](#Features)
+  - [Functionality](#Functionality)
+  - [Existing Features](#Existing-Features)
+    - [Game Controls](#Game-Controls)
+  - [Features Left To Implement](#Features-Left-To-Implement)
+- [**Technologies Used**](#Technologies-Used)
+  - [Version Control](#Version-Control)
+- [**Testing**](#Testing)
+  - [Testing User Stories](#Testing-User-Stories)
+  - [Responsive Testing](#Responsive-Testing)
+  - [Additional Testing](#Additional-Testing)
+  - [HTML And CSS Validation](#HTML-And-CSS-Validation)
+  - [Interesting Bugs Or Problems](#Interesting-Bugs-Or-Problems)
+- [**Deployment**](#Deployment)
+  - [Running Code Locally](#Running-Code-Locally)
+- [**Credits**](#Credits)
+  - [Content](#Content)
+  - [Media](#Media)
+    - [Pictures](#Pictures)
+  - [Acknowledgements](#Acknowledgements)
+  - [Disclaimer](#Disclaimer)
 
-## Gitpod Reminders
+## About
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Claims corner is a proof of concept for a claims portal to be utilised by an insurer broker. The stratergy is the broker give their client access to our portal to report claims, in return for this the client has a ready made claims record and archive. 
 
-`python3 -m http.server`
+## UX
 
-A blue button should appear to click: _Make Public_,
+### User Stories
 
-Another blue button should appear to click: _Open Browser_.
+User stories fall into two categories. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Client Facing and Broker facing. 
 
-A blue button should appear to click: _Make Public_,
+- Client specific log on.
+- Ability to report motor claims. 
+- Able to report property claims.
+- A client specific login. 
+- the broker needs to able to see all client's claims. 
+- ability to upload photos. 
+- Able to upload video footage.
+- Able to veiw posiiton of the claim. 
+- Able to view actions points on the claim. 
+- Able to operate a diary system
+- able to see the MI on their claims portfiolo. 
 
-Another blue button should appear to click: _Open Browser_.
+### Research
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+This game is derived from the card game, higher or lower. I replaced the playing cards with history cards.
+I looked at several higher or lower games via youtube and the wider web and almost all didn’t use playing cards, just numbers. I did find an Udemy course, that showed you how to make a high lower claim game using JavaScript. I found this invaluable as it showed you how to construct many of the elements needed to make the game.
 
-To log into the Heroku toolbelt CLI:
+- In particular:
+  - The shuffle
+  - Scoring system
+  - Scoring system
+  - Number of turns.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+A link to this course can be found [here](https://www.udemy.com/course/javascript-card-game/).
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+I switched the idea from higher or lower to before or after as this fitted better with the content of the game, did an event happen before or after the previous event.
 
-------
+### Styling
 
-## Release History
+I wanted the game to resemble a deck of card and the appearance to look old, as if the cards have been used. With this I opted for a slightly of white colour for the background of the cards.
+The text also had to look historical, the typewriter font helped finish off the look of the game.
+The next step I wanted cards to rotate to reveal their information, I also wanted the additional historical to appear after the questions are answered.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Wireframes
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+![Desktop Home Screen ](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/wireframes/Desktop%20Home%20Screen.png)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Features
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Existing-Features
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- Deal button
+- Deals 10 cards at random from a deck of 42 cards.
+- Each card contains:
+  - A name of event
+  - A Picture of the event.
+  - Year of Event
+  - A more info button on each card, provides a short paragraph about the historical event.
+  - In addition to the more info card a link to a website describes the event in even more detail.
+- A Score bored
+- Compare your score against a benchmark of score
+- Add card - a separate page that allows users to suggest a new card to be added to teh deck.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Game-Controls
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- home screen - this expains the game and how to play it.
+- A Play Button - Stars the game.
+- A Before of After button - These are your game controlers, pick the correct asswer and you'll score a point.
+- A scoreboard - Points are logged here.
+- A more info button - on the reveal card addation infomation is available about the event.
+- A link for additional information - If you want to read even more about the subject this will take you to a link.
+- A play again button - Take yuou back to the start of the game.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Features-Left-To-Implement
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- I want levels of difficulty.
+  - Hard
+  - Medium
+  - Easy
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Technologies-Used
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+[**Trello**](https://trello.com/)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- Used to time manage the various steps in the project.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+[**Balsamiq**](https://balsamiq.com/)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- Balsamiq was used to create wireframes of both the mobile and website before construction began.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+[**Gitpod**](https://gitpod.io/)
 
-------
+- I used Gitpod to write my code.
 
-## FAQ about the uptime script
+[**Git**](https://git-scm.com/)
 
-**Why have you added this script?**
+- I've used Git version control system to regularly add and commit changes made to project in gitpod thn pushing them to GitHub.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+[**Google Fonts**](https://fonts.google.com/)
 
-**How will this affect me?**
+- I used google fonts to style the text.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+[**Bootstrap**](https://getbootstrap.com/)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- I've used bootstrap to to assist with my layout. I've then used CSS to style same.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+[**HTML**](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 
-**So….?**
+- HTML is used to create the landing page for my game.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+[**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3)
 
-**Can I opt out?**
+- The project uses CSS to apply style to my site. The style.css is link to the index.html.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+[**JavaScript**](https://www.javascript.com/)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+- The main focus of this project. script.js is linked to the index.html file.
 
-**Anything more?**
+[**jQuery**](https://jquery.com)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- I use jQueryt for DOM manipulation in my project.
 
----
+## Version Control
 
-Happy coding!
+[**Git**](https://git-scm.com/)
+
+- Git was used to regularly commit changes made to my project.
+
+[**GitHub**](https://github.com/)
+
+- Is used as my Repository.
+
+## Testing
+
+### Testing-User-Stories
+
+- I want a play button.
+  ![Desktop Home Screen ](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/wireframes/Desktop%20Home%20Screen.png)
+
+- I want a large deck of cards.
+
+The deck consists of 42 cards, more can be added with the add card page.
+
+- I’d prefer not to have war events.
+
+No War events included.
+
+- I want the draw to be random.
+
+Using the math function the array is shuffled at random at the start of every game.
+
+![JS math](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/WriteUpPics/shuffle.png)
+
+- I want short snappy game, no more than 10 cards in normal mode.
+
+Game in completed in 10 moves.
+
+- I want more than just the year of the event, more info and more information.
+  ![More Info button](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/WriteUpPics/moreInfo.png)
+
+- I want a play again button.
+
+Play again button.
+
+- I want a scoreboard.
+
+Scoreboard at the top of the page shows the current score
+
+- I want to be able to request a new card is added to the deck.
+
+![New Card](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/WriteUpPics/addCard.png)
+
+### Responsive-Testing
+
+The wibesite was set up as a mbile first wesite, the game type meant that hte cards only had to be above and below each other to work on mobile.
+
+#### Web Browser and DEvice Testing
+
+![Web Browser and DEvices Testing](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/WriteUpPics/devices%20and%20webbrowser%20tests.png)
+
+### Additional-Testing
+
+#### Add Card Form.
+
+To test the add card form I went to the card form and loaded my deatils.
+
+I entered my details pressed send and then checked my email for the message.
+
+![EmailJS Test](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/WriteUpPics/emailJStest.png)
+
+### HTML-And-CSS-Validation
+
+I used the website, https://validator.w3.org/#validate_by_input, to check my html code, when testing 4 minor errors were noted. 2 of them were not closed a /div once that was closed 2 errors were resolved. The other two erros were generated by a some id being used twiced, once this was resolved all the errors were gone.
+
+![Image of html test](assets/testing/html-test.jpg)
+
+I used the website. https://jigsaw.w3.org/css-validator/, to check the code for my CSS, fortunatley it showed no errors.
+![Image of css test](assets/testing/css-test.jpg)
+
+### Interesting-Bugs-Or-Problems
+
+Not a bug as such, but something that took me far too long to work out! It was getting the card below/right of the question top/left to display as the second card in the array, it was a very easy fix in the end, I should have asked somebody...
+
+Simply all I had to do was change count to count++ and that as that.
+
+## Deployment
+
+Gitpod was used to devleoped the site, with progress being comitted to git via the terminal.
+
+### Deployment of Page
+
+- Log onto GitHub
+- Go to the “repositories” section
+- Click: ms2historybeforeorafter
+- Click on "settings" located in the right handside, sort of in the middle of the screen.
+- Click on “Pages” on the left handside menu
+- Under “Source”, select “Master” in the first tab
+- In the next tab, select “/root” if not already selected by default
+- Click “Save” and the url should be displayed above the "source" section
+- Now that the link is displayed, the website is deployed and can be accessed in the browser by clicking on the url
+
+### Repository Link
+
+To run the game in a live environment [click here](https://whatnote.github.io/ms2historybeforeorafter/)
+
+The link to my repository can be found via this link:
+[Link to Repository](https://github.com/whatnote/ms2historybeforeorafter)
+
+### Running-Code-Locally
+
+- Navigate to the GitHub Repository
+- Click the Code drop down menu.
+- Click the clipboard icon to copy the URL provided
+- Open your preferred development editor the open a terminal window in a directory you like.
+- Use "git clone" and paste the copied URL after it.
+- A clone of the project will be created locally on your machine.
+
+### Credits
+
+### Content
+
+- Most of the code was written by me, where it's not I've commented the url by the borrowed section of code.
+
+- As mentioned above I did find an Udemy course, that showed you how to make a high lower claim game using JavaScript. I found this invaluable as it showed you how to construct many of the elements needed to make the game.
+
+* In particular:
+
+  - The shuffle
+  - Scoring system
+  - Number of turns.
+
+  A link to this course can be found [here](https://www.udemy.com/course/javascript-card-game/).
+
+- The game is clearly not an oringal idea but I would like to think my twist on it using historical events is.
+
+### Media
+
+#### Pictures
+
+### Acknowledgements
+
+A special thanks to my Mentor Spencer Barriball for his guidance in the project. I also need to thank my partner Chrissy and my Daughter Abbey-Rae for allowing me a great many hours in front of the computer.
+
+### Disclaimer
+
+This is an education only project.
