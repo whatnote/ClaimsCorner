@@ -34,7 +34,7 @@
 
 ## About
 
-Claims corner is a proof of concept for a claims portal to be utilised by an insurer broker. The stratergy is the broker give their client access to our portal to report claims, in return for this the client has a ready made claims record and archive. 
+Claims corner is a proof of concept for a claims portal to be utilised by an insurer broker connecting the to their client to assit in providing faster and easier claims reporting. The stratergy is the broker give their client access to our portal to report claims, in return for this the client has a ready made claims record and archive. 
 
 ## UX
 
@@ -136,9 +136,9 @@ The next step I wanted cards to rotate to reveal their information, I also wante
 
 - I used google fonts to style the text.
 
-[**Bootstrap**](https://getbootstrap.com/)
+[**Materializecss**](https://materializecss.com/)
 
-- I've used bootstrap to to assist with my layout. I've then used CSS to style same.
+- I've used materializecss to to assist with my layout. I've then used CSS to style same.
 
 [**HTML**](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 
@@ -155,6 +155,31 @@ The next step I wanted cards to rotate to reveal their information, I also wante
 [**jQuery**](https://jquery.com)
 
 - I use jQueryt for DOM manipulation in my project.
+
+[**Python3**](https://www.python.org/)
+- was used to program the join the frontend to the backend. 
+
+[**Flask**](https://flask.palletsprojects.com/en/2.0.x/)
+
+- was used as the micro framework for python3
+
+[**Werkzeug**](https://www.palletsprojects.com/p/werkzeug/)
+
+- Flask wraps Werkzeug, using it to handle the details of WSGI while providing more structure and patterns for defining powerful applications.
+
+[**Jinja**](https://jinja.palletsprojects.com/en/2.11.x/)
+
+- Jinja2 is a full-featured template engine for Python.
+
+[**Heruko**](https://id.heroku.com/login)
+
+- Heruko was used to host and delpoy the site 
+
+[**MongoDB**](https://www.mongodb.com/)
+- MongoDB was used as the backend database
+
+[**Radom Key Generator**](https://randomkeygen.com/)
+- Ramdom key was used to generate the necessary key to protect the database. 
 
 ## Version Control
 
