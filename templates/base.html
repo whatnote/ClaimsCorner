@@ -13,6 +13,44 @@
 
 <body>
 
+    <header>
+        <!-- top nav bar-->
+        <nav>
+            <div class="nav-wrapper text-shadow light-blue darken-2">
+              <a href="#" class="brand-logo">Claims Corner</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="#">New Claim</a></li>
+                
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">New Task</a></li>
+                  
+                  <li><a href="#">All Claims</a></li>
+                  
+                  <li><a href="#">Log Out</a></li>
+                
+                  <li><a href="#">Log In</a></li>
+                  <li><a href="#">Register</a></li>
+                
+              </ul>
+            </div>
+          </nav>
+        <!-- side nav bar-->
+          <ul class="sidenav" id="mobile-demo">
+            <li><a href="#">New Claim</a></li>
+                
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">New Task</a></li>
+            
+            <li><a href="#">All Claims</a></li>
+            
+            <li><a href="#">Log Out</a></li>
+          
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Register</a></li>
+          </ul>
+
+    </header>
 
     <main class="container">
         {% block content %}
