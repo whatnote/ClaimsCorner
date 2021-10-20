@@ -8,23 +8,35 @@
             {% for claim in claims %}
             <li>
               <div class="collapsible-header">
-                <strong>{{ claim.Company_Name }}</strong>
-                {{ claim.Incident_Date }} {{ claim.Registration }}
+                  <div class="row">
+                    <i class="fas fa-caret-down"></i>
+                      <div class="col">
+                          <p>{{ claim.Company_Name }}</p>
+                      </div>
+
+                      <div class="col">
+                          <p>Incident Date: </p><p>{{ claim.Incident_Date }}</p>
+                      </div>
+                      <div class="col">
+                          <p>{{ claim.Registration }}</p>
+                      </div>
+                  </div>
+
               </div>
               <div class="collapsible-body">
 
                 <div class="row">
-                    <p>Circumstancees{{ claim.Description }}</p>
+                    <p><h5>Circumstances</h5>{{ claim.Description }}</p>
                   <div class="row">
                       <div class="col s6">
-                          <h4>Third Party Details</h4>
+                          <h5>Third Party Details</h5>
                           <p>{{ claim.tp_name }}</p>
                           <p>{{ claim.tp_reg }}</p>
                           <p>{{ claim.tp_number }}</p>
                           <p>{{ claim.no_off_passngers }}</p>
                       </div>
                       <div class="col s6">
-                          <h4>Our Driver Details</h4>
+                          <h5>Our Driver's Details</h5>
                           <p>{{ claim.Driver }}</p>
                           <p>{{ claim.DOB }}</p>
                           
