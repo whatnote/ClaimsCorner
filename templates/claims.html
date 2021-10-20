@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+            <h2 class="light-blue-text text-darken-4 center-align">Claims</h2>
+                 
+       
+        <ul class="collapsible popout">
+            {% for claim in claims %}
+            <li>
+              <div class="collapsible-header">
+                <strong>{{ claim.Company_Name }}</strong>
+                {{ claim.Incident_Date }} {{ claim.Registration }}
+              </div>
+              <div class="collapsible-body">
+
+                <div class="row">
+                    <p>Circumstancees{{ claim.Description }}</p>
+                  <div class="row">
+                      <div class="col s6">
+                          <h4>Third Party Details</h4>
+                          <p>{{ claim.tp_name }}</p>
+                          <p>{{ claim.tp_reg }}</p>
+                          <p>{{ claim.tp_number }}</p>
+                          <p>{{ claim.no_off_passngers }}</p>
+                      </div>
+                      <div class="col s6">
+                          <h4>Our Driver Details</h4>
+                          <p>{{ claim.Driver }}</p>
+                          <p>{{ claim.DOB }}</p>
+                          
+                      </div>
+                  </div>
+              </div>
+            </li>
+            
+            {% endfor %}  
+          </ul>
+
+{% endblock %}
