@@ -19,10 +19,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_claim_form")
-def get_claim_form():
-    claim_form = mongo.db.tasks.find()
-    return render_template("claim_form.html", claim_form=claim_form)
+@app.route("/get_claimForm")
+def get_claimForm():
+    claimForm = mongo.db.claimForm.find()
+    return render_template("claimForm.html", claimForm=claimForm)
 
 
 if __name__ == "__main__":

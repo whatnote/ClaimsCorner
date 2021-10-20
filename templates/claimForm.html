@@ -8,11 +8,11 @@
 </head>
 <body>
     <h2>Hello</h2>
-    {% for claim in claim_form %}
-        {{ claim.Company }}<br>
-        {{ claim.Incident }}<br>
-        {{ claim.Driver }}<br>
-        {{ claim.Registration }}<br>
+    {% for Form in claimForm %}
+        {{ Form.Company_Name }}<br>
+        {{ Form.Incident_Date }}<br>
+        {{ Form.Driver }}<br>
+        
     {% endfor %}
 </body>
 </html>
