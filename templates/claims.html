@@ -5,40 +5,41 @@
                  
        
         <ul class="collapsible popout">
+          <li>
+            <div class="row">
+              <span class="gap center-align">Client </span> <span class="gap center-align">Incident Date </span> <span class="gap center-align">Vehicle Registration</span></div>
+               
+            </div>
             {% for claim in claims %}
             <li>
               <div class="collapsible-header">
-                  <div class="row">
-                    <i class="fas fa-caret-down"></i>
-                      <div class="col">
-                          <p>{{ claim.Company_Name }}</p>
-                      </div>
-
-                      <div class="col">
-                          <p>Incident Date: </p><p>{{ claim.Incident_Date }}</p>
-                      </div>
-                      <div class="col">
-                          <p>{{ claim.Registration }}</p>
-                      </div>
-                  </div>
-
+                <i class="fas fa-caret-down"></i><span class="gap">{{ claim.Company_Name }} </span> <span class="gap">{{ claim.Incident_Date }} </span> <span class="gap">{{ claim.Registration }}</span></div>
+                 
               </div>
               <div class="collapsible-body">
 
                 <div class="row">
-                    <p><h5>Circumstances</h5>{{ claim.Description }}</p>
-                  <div class="row">
+                    <div class="col s12">
+                    <p><h5 class="underline">Circumstances</h5>{{ claim.Description }}</p>
+                    </div>
+
+                    <div class="row">
                       <div class="col s6">
-                          <h5>Third Party Details</h5>
-                          <p>{{ claim.tp_name }}</p>
-                          <p>{{ claim.tp_reg }}</p>
-                          <p>{{ claim.tp_number }}</p>
-                          <p>{{ claim.no_off_passngers }}</p>
+                          <h5 class="underline">Third Party Details</h5>
+                          <span class="detsGap">TP Driver: </span><span>{{ claim.tp_name }}</span><br>
+                          <span class="detsGap">TP Vehicle: </span><span>{{ claim.tp_reg }}</span><br>
+                          <span class="detsGap">Contacty Number</span> <span>{{ claim.tp_number }}</span><br>
+                          <span class="detsGap">Address</span><span></span><br>
+                          <span class="detsGap">No. of People in TP vehicle</span><span>{{ claim.no_off_passangers }}</span><br>
                       </div>
                       <div class="col s6">
-                          <h5>Our Driver's Details</h5>
-                          <p>{{ claim.Driver }}</p>
-                          <p>{{ claim.DOB }}</p>
+                          <h5 class="underline">Our Driver's Details</h5>
+                          <span class="detsGap">Driver's Name: </span><span>{{ claim.Driver }}</span><br>
+                          <span class="detsGap">Date of Birth: </span><span>{{ claim.DOB }}</span><br>
+                          <span class="detsGap">Licence Type: </span><span></span><br>
+                          <span class="detsGap">Date relevent Test Passed </span><span></span><br>
+                          <span class="detsGap">Any Points</span><span></span><br>
+                          <span class="detsGap" >Any Medical Conditions</span><span></span><br>
                           
                       </div>
                   </div>
@@ -47,5 +48,5 @@
             
             {% endfor %}  
           </ul>
-
+         
 {% endblock %}

@@ -15,8 +15,6 @@ nav li a{
 
 }
 
-
-
 .leftpadding{
     margin-left: 10px;
 }
@@ -40,7 +38,27 @@ nav li a{
     line-height: 2;
 }
 
+
+/* claims page styling*/
 .collapsible-header .col strong {
     margin: 5px;
     line-height: 42px;
 } 
+
+/* collapsible spacing*/
+.gap{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h5{
+    font-size: 2rem;
+}
+
+.underline{
+    border-bottom:rgb(29, 29, 29) solid 2px; ;
+}
+
+.detsGap{
+    margin-right: 1rem;
+}
