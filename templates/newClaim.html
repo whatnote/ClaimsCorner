@@ -21,12 +21,53 @@
             <input id="Incident_Date" name="Incident_Date" type="text" class="datepicker validate">
             <label for="Incident_Date">Incdient Date</label>
           </div>
+          <div class="input-field col s6">
+            <select>
+              <option value="" disabled selected>Liability?</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            
+          </div>
           <div class="input-field col s12">
             <textarea id="Description" name="Description" class="materialize-textarea validate" required
             minlength="5" maxlength="400"></textarea>
             <label for="Description">Circumsntaces</label>
           </div>
-        </div>
+        </div>            
+
+        <div class="row">
+          <div class="col s4"><h2>Vehicle Details</h2>
+        </div>  
+        <div class="col s4">
+      </div>  
+      <div class="col s4 center-align"><h5>Claiming for Own Damage?</h5></div>
+    </div>  
+
+        <div class="row">
+            <div class="input-field col s4">
+            <input id="first_name" type="text" class="validate">
+        
+        
+            <label for="first_name">Registration</label>
+          </div>
+          <div class="input-field col s4">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Make and Model</label>
+          </div>
+          <div class="input-field center-align col s4">
+                        <div class="switch">
+              <label>
+                Yes
+                <input type="checkbox">
+                <span class="lever"></span>
+                No
+              </label>
+            </div>
+          </div>
+        </div>    
+        
         <div class="row">
           <h2>Driver Details</h2>
           <div class="input-field col s6">
