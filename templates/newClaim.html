@@ -1,51 +1,83 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>New Claims</h2>
+    <h2 class="center-align">Notify a New Claim</h2>
    
 
-    <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s6">
-              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-              <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate">
-              <label for="last_name">Last Name</label>
-            </div>
+    <div class="row card-panel">
+      <form class="col s12" method="POST" action=" ">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="Company_Name" name="Company_Name" minlength="5" maxlength="25" type="text" class="validate">
+            <label for="Company_Name">Client Name</label>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-              <label for="disabled">Disabled</label>
-            </div>
+          <div class="input-field col s6">
+            <input id="client_contact_no" name="client_contact_no" type="text" class="validate">
+            <label for="client_contact_no">Contact Number</label>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="password" type="password" class="validate">
-              <label for="password">Password</label>
-            </div>
+        </div>            
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="Incident_Date" name="Incident_Date" type="text" class="datepicker validate">
+            <label for="Incident_Date">Incdient Date</label>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
-              <label for="email">Email</label>
-            </div>
+          <div class="input-field col s12">
+            <textarea id="Description" name="Description" class="materialize-textarea validate" required
+            minlength="5" maxlength="400"></textarea>
+            <label for="Description">Circumsntaces</label>
           </div>
-          <div class="row">
-            <div class="col s12">
-              This is an inline input field:
-              <div class="input-field inline">
-                <input id="email_inline" type="email" class="validate">
-                <label for="email_inline">Email</label>
-                <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
-              </div>
-            </div>
+        </div>
+        <div class="row">
+          <h2>Driver Details</h2>
+          <div class="input-field col s6">
+            <input id="first_name" type="text" class="validate">
+            <label for="first_name">Name</label>
           </div>
-        </form>
-      </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Date of Birth</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Licence Held</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Date Relevant Test Pass</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Any Points</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Any Medical Conditions</label>
+          </div>
+        </div>
+        <div class="row">
+          <h2>Third party Details</h2>
+          <div class="input-field col s6">
+            <input id="first_name" type="text" class="validate">
+            <label for="first_name">Third Party's Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Contact Number</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="first_name" type="text" class="validate">
+            <label for="first_name">Third Party Vehicle Reg</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Third Party Vehicle make and colour</label>
+          </div>
+        </div>
+
+      </form>
+    </div>
             
 
     {% endblock %}

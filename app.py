@@ -24,9 +24,12 @@ mongo = PyMongo(app)
 def about(): 
     return render_template("about.html")
 
+
 @app.route("/newClaim")
 def newClaim(): 
+    
     return render_template("newClaim.html")
+
 
 @app.route("/claims")
 def claims():
@@ -36,13 +39,12 @@ def claims():
 
 @app.route("/register")
 def register():
-    
     return render_template("register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
-   return render_template("login.html")
+    return render_template("login.html")
 
 
 if __name__ == "__main__":

@@ -10,6 +10,10 @@ body{
     font-size:1.5rem;
 }
 
+h2{
+    font-size: 2.5rem;
+}
+
 nav li a{
     font-size:1.8rem;
 
@@ -62,3 +66,14 @@ h5{
 .detsGap{
     margin-right: 1rem;
 }
+
+/* Claim form styling */
+
+label::placeholder {
+    
+    font-size: 2.5rem;
+  }
+
+ form h2{
+    font-size:2rem;
+ }
