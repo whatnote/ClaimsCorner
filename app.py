@@ -32,7 +32,8 @@ def about():
 
 @app.route("/newClaim")
 def newClaim():
-    return render_template("newClaim.html",)
+    liability = mongo.db.liability.find().sort("liability", 1)
+    return render_template("newClaim.html", liability=liability)
 
 
 @app.route("/claims")

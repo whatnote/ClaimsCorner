@@ -19,14 +19,15 @@
         <div class="row">
           <div class="input-field col s6">
             <input id="Incident_Date" name="Incident_Date" type="text" class="datepicker validate">
-            <label for="Incident_Date">Incdient Date</label>
+            
+            <label for="Incident_Date"></label>
           </div>
           <div class="input-field col s6">
-            <select>
+            <select id="liability" name="liability" class="validate" required>
               <option value="" disabled selected>Liability?</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
+              {% for liab in liability %}
+              <option value="{{ liab.liability }}">{{ liab.liability }}</option>
+              {% endfor %}
             </select>
             
           </div>
