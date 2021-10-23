@@ -30,8 +30,18 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/newClaim")
+@app.route("/newClaim", methods=["GET", "POST"])
 def newClaim():
+    if request.method == "POST":
+        own_damage = "on" if request.form.get("own_damage") else "off"
+        claimData = {
+            "Company_Name": request.form.get("Company_Name"), 
+            "client_contact_no": request.form.get("client_contact_no"),
+            "Incident_Date": request.form.get("Incident_Date"), 
+            "Description": request.form.get("Description"),
+            "own_damage": request.form.get("own_damage")
+        }
+        mongo.db.claimForm.insert_one(claimData)
     liability = mongo.db.liability.find().sort("liability", 1)
     return render_template("newClaim.html", liability=liability)
 

@@ -5,7 +5,7 @@
    
 
     <div class="row card-panel">
-      <form class="col s12" method="POST" action=" ">
+      <form class="col s12" method="POST" action="{{  url_for('newClaim')}} ">
         <div class="row">
           <div class="input-field col s6">
             <input id="Company_Name" name="Company_Name" minlength="5" maxlength="25" type="text" class="validate">
@@ -117,7 +117,10 @@
             <label for="last_name">Third Party Vehicle make and colour</label>
           </div>
         </div>
-
+        <div class="row">
+          <div class="col s12 center-align  "> <button class="btn-large light-blue accent-4" type="submit">Notify Claim</button>
+          </div>
+        </div>
       </form>
     </div>
             
