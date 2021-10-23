@@ -35,11 +35,27 @@ def newClaim():
     if request.method == "POST":
         own_damage = "on" if request.form.get("own_damage") else "off"
         claimData = {
-            "Company_Name": request.form.get("Company_Name"), 
-            "client_contact_no": request.form.get("client_contact_no"),
-            "Incident_Date": request.form.get("Incident_Date"), 
-            "Description": request.form.get("Description"),
-            "own_damage": request.form.get("own_damage")
+            "client_name": request.form.get("client_name"), 
+            "contact_number": request.form.get("contact_number"),
+            "email_address": request.form.get("email_address"),
+            "incident_date": request.form.get("incident_date"), 
+            "liability": request.form.get("liability"),
+            "circumstances": request.form.get("circumstances"), 
+            "registration": request.form.get("registration"),
+            "make_and_model": request.form.get("make_and_model"),
+            "any_ad": request.form.get("any_ad"),
+            "driver_name": request.form.get("driver_name"), 
+            "dob": request.form.get("dob"), 
+            "lic_held": request.form.get("lic_held"), 
+            "date_lic_passed": request.form.get("date_lic_passed"), 
+            "any_points": request.form.get("any_points"),
+            "medical_conditoins": request.form.get("medical_conditoins"),
+            "tp_name": request.form.get("tp_name"),
+            "tp_number": request.form.get("tp_number"),
+            "tp_reg": request.form.get("tp_reg"),
+            "tp_veh_make": request.form.get("tp_veh_make"),
+            "tp_passnagers": request.form.get("tp_passnagers"),
+            "tp_address": request.form.get("tp_address"),
         }
         mongo.db.claimForm.insert_one(claimData)
     liability = mongo.db.liability.find().sort("liability", 1)
