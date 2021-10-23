@@ -3,7 +3,7 @@
 
     <h2 class="center-align">Notify a New Claim</h2>
    
-
+  <!-- client's name and contact numer-->
     <div class="row card-panel">
       <form class="col s12" method="POST" action="{{  url_for('newClaim')}} ">
         <div class="row">
@@ -17,9 +17,9 @@
           </div>
         </div>            
         <div class="row">
+  <!-- liabilty picker circumstanse and incident date-->
           <div class="input-field col s6">
-            <input id="Incident_Date" name="Incident_Date" type="text" class="datepicker validate">
-            
+            <input id="Incident_Date" name="Incident_Date" type="text" class="datepicker validate">           
             <label for="Incident_Date"></label>
           </div>
           <div class="input-field col s6">
@@ -28,8 +28,7 @@
               {% for liab in liability %}
               <option value="{{ liab.liability }}">{{ liab.liability }}</option>
               {% endfor %}
-            </select>
-            
+            </select>          
           </div>
           <div class="input-field col s12">
             <textarea id="Description" name="Description" class="materialize-textarea validate" required
@@ -37,7 +36,7 @@
             <label for="Description">Circumsntaces</label>
           </div>
         </div>            
-
+  <!-- vehicle details make and claiming for own damage?-->      
         <div class="row">
           <div class="col s4"><h2>Vehicle Details</h2>
         </div>  
@@ -48,9 +47,7 @@
 
         <div class="row">
             <div class="input-field col s4">
-            <input id="first_name" type="text" class="validate">
-        
-        
+            <input id="first_name" type="text" class="validate">     
             <label for="first_name">Registration</label>
           </div>
           <div class="input-field col s4">
@@ -59,16 +56,16 @@
           </div>
           <div class="input-field center-align col s4">
                         <div class="switch">
-              <label>
+              <label for="own_damage">
                 Yes
-                <input type="checkbox">
+                <input type="checkbox" id="own_damage" name="own_damage">
                 <span class="lever"></span>
                 No
               </label>
             </div>
           </div>
         </div>    
-        
+  <!-- driver details - lic medical DOB -->      
         <div class="row">
           <h2>Driver Details</h2>
           <div class="input-field col s6">
@@ -97,6 +94,8 @@
           </div>
         </div>
         <div class="row">
+
+  <!--third party contact details-->        
           <h2>Third party Details</h2>
           <div class="input-field col s6">
             <input id="first_name" type="text" class="validate">
