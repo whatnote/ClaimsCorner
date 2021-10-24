@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
@@ -35,19 +36,19 @@ def newClaim():
     if request.method == "POST":
         own_damage = "on" if request.form.get("own_damage") else "off"
         claimData = {
-            "client_name": request.form.get("client_name"), 
+            "client_name": request.form.get("client_name"),
             "contact_number": request.form.get("contact_number"),
             "email_address": request.form.get("email_address"),
-            "incident_date": request.form.get("incident_date"), 
+            "incident_date": request.form.get("incident_date"),
             "liability": request.form.get("liability"),
-            "circumstances": request.form.get("circumstances"), 
+            "circumstances": request.form.get("circumstances"),
             "registration": request.form.get("registration"),
             "make_and_model": request.form.get("make_and_model"),
             "any_ad": request.form.get("any_ad"),
-            "driver_name": request.form.get("driver_name"), 
-            "dob": request.form.get("dob"), 
-            "lic_held": request.form.get("lic_held"), 
-            "date_lic_passed": request.form.get("date_lic_passed"), 
+            "driver_name": request.form.get("driver_name"),
+            "dob": request.form.get("dob"),
+            "lic_held": request.form.get("lic_held"),
+            "date_lic_passed": request.form.get("date_lic_passed"),
             "any_points": request.form.get("any_points"),
             "medical_conditoins": request.form.get("medical_conditoins"),
             "tp_name": request.form.get("tp_name"),
@@ -86,38 +87,11 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        #put the new user into 'seddion' cookie
+        # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registraion successful")
-        return redirect(url_for("profile", username=session["user"]))
+        
     return render_template("register.html")
-
-
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        # check is username exists in db?
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-        if existing_user:
-            # ensure check_password matches use input
-            if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get(
-                        "username").lower()
-                    flash("Welcome, {}".format(
-                        request.form.get("username")))
-                    return redirect(url_for("profile", username=session["user"]))
-            else:
-                # invalid password match
-                flash("Incorrect Username and/or Password")
-                return redirect(url_for("login"))
-
-        else:
-            # username doesn't exist
-            flash("Incorrect Username and/or Password")
-            return redirect(url_for("login"))
-    return render_template("login.html")
 
 
 if __name__ == "__main__":
