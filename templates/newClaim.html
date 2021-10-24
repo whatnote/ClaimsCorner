@@ -44,15 +44,18 @@
         </div>            
   <!-- vehicle details make and claiming for own damage?-->      
         <div class="row">
-          <div class="col s4"><h2>Vehicle Details</h2>
+          <div class="col s4">
+            <h2>Vehicle Details</h2>
+          </div>  
+          <div class="col s4">
+          </div>  
+          <div class="col s4 center-align">
+            <h5>Claiming for Own Damage?</h5>
+          </div>
         </div>  
-        <div class="col s4">
-      </div>  
-      <div class="col s4 center-align"><h5>Claiming for Own Damage?</h5></div>
-    </div>  
 
         <div class="row">
-            <div class="input-field col s4">
+          <div class="input-field col s4">
             <input id="registration" name="registration" type="text" class="validate">     
             <label for="registration">Registration</label>
           </div>
@@ -61,7 +64,7 @@
             <label for="make_and_model">Make and Model</label>
           </div>
           <div class="input-field center-align col s4">
-                        <div class="switch">
+            <div class="switch">
               <label for="any_ad">
                 Yes
                 <input type="checkbox" id="any_ad" name="any_ad">
@@ -74,63 +77,65 @@
   <!-- driver details - lic medical DOB -->      
         <div class="row">
           <h2>Driver Details</h2>
-          <div class="input-field col s6">
-            <input id="driver_name" name="driver_name" type="text" class="validate">
-            <label for="driver_name">Name</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="dob" name="dob" type="text" class="validate">
-            <label for="dob">Date of Birth</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="lic_held" name="lic_held" type="text" class="validate">
-            <label for="lic_held">Licence Held</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="date_lic_passed" name="date_lic_passed" type="text" class="validate">
-            <label for="date_lic_passed">Date Relevant Test Pass</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="any_points" name="any_points" type="text" class="validate">
-            <label for="any_points">Any Points</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="medical_conditoins" name="medical_conditoins" type="text" class="validate">
-            <label for="medical_conditoins">Any Medical Conditions</label>
-          </div>
+            <div class="input-field col s6">
+              <input id="driver_name" name="driver_name" type="text" class="validate">
+              <label for="driver_name">Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="dob" name="dob" type="text" class="validate datepicker">
+              <label for="dob">Date of Birth</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="lic_held" name="lic_held" type="text" class="validate">
+              <label for="lic_held">Licence Held</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="date_lic_passed" name="date_lic_passed" type="text" class="validate datepicker">
+              <label for="date_lic_passed">Date Relevant Test Pass</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="any_points" name="any_points" type="text" class="validate">
+              <label for="any_points">Any Points</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="medical_conditoins" name="medical_conditoins" type="text" class="validate">
+              <label for="medical_conditoins">Any Medical Conditions</label>
+            </div>
         </div>
-        <div class="row">
 
-  <!--third party contact details-->        
+  <!--third party contact details-->      
+        <div class="row">  
           <h2>Third party Details</h2>
-          <div class="input-field col s6">
-            <input id="tp_name" name="tp_name" type="text" class="validate">
-            <label for="tp_name">Third Party's Name</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="tp_number" name="tp_number" type="text" class="validate">
-            <label for="tp_number">Contact Number</label>
-          </div>
+            <div class="input-field col s6">
+              <input id="tp_name" name="tp_name" type="text" class="validate">
+              <label for="tp_name">Third Party's Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="tp_number" name="tp_number" type="text" class="validate">
+              <label for="tp_number">Contact Number</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="tp_reg" name="tp_reg" type="text" class="validate">
+              <label for="tp_reg">Third Party Vehicle Reg</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="tp_email" name="tp_email" type="text" class="validate">
+              <label for="tp_email">Third Party Email Address</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="tp_veh_make" name="tp_veh_make" type="text" class="validate">
+              <label for="tp_veh_make">Third Party Vehicle make and colour</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="tp_address" name="tp_address" type="text" class="validate">
+              <label for="tp_address">TP Address</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="tp_passnagers" name="tp_passnagers" type="text" class="validate">
+              <label for="tp_passnagers">Total number of people in car?</label>
+            </div>
         </div>
-        <div class="row">
-          <div class="input-field col s6">
-            <input id="tp_reg" name="tp_reg" type="text" class="validate">
-            <label for="tp_reg">Third Party Vehicle Reg</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="tp_veh_make" name="tp_veh_make" type="text" class="validate">
-            <label for="tp_veh_make">Third Party Vehicle make and colour</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="tp_address" name="tp_address" type="text" class="validate">
-            <label for="tp_address">TP Address</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="tp_passnagers" name="tp_passnagers" type="text" class="validate">
-            <label for="tp_passnagers">Totl number of people in car?</label>
-          </div>
-
-        </div>
+  <!--submit claim button-->
         <div class="row">
           <div class="col s12 center-align  "> <button class="btn-large light-blue accent-4" type="submit">Notify Claim</button>
           </div>

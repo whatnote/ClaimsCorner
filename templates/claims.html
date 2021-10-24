@@ -25,8 +25,10 @@
                 <div class="col s12">
                                       
                   <span class="detsGap">Contact Number: </span><a href="tel:{{ claim.contact_number }}">{{ claim.contact_number }}</a><br>                    
-                  <span class="detsGap">Contact Email: </span>   <a href = "mailto:{{ claim.email_address }}">{{ claim.email_address }}</a><br> 
-                                  
+                  <span class="detsGap">Contact Email: </span><a href = "mailto:{{ claim.email_address }}">{{ claim.email_address }}</a><br> 
+                  <a href = "mailto:{{ claim.email_address }}?subject = {{ claim.incident_date }} {{ claim.registration }} = Message">
+                    Send Feedback
+                    </a>                
                 </div>
 
                 <div class="row">
@@ -58,9 +60,9 @@
                         <span class="detsGap">TP Driver: </span><span>{{ claim.tp_name }}</span><br>
                         <span class="detsGap">TP Vehicle: </span><span>{{ claim.tp_reg }}</span><br>
                         <span class="detsGap">Contact Number:</span> <a href="tel:{{ claim.tp_number }}">{{ claim.tp_number }}</a><br>
+                        <span class="detsGap">TP Email:</span> <a href="tel:{{ claim.tp_email }}">{{ claim.email }}</a><br>
                         <span class="detsGap">Address:</span><span></span><br>
-                        <span class="detsGap">No. of People in TP
-                          vehicle:</span><span>{{ claim.tp_passnagers }}</span><br>
+                        <span class="detsGap">No. of People in TP vehicle:</span><span>{{ claim.tp_passnagers }}</span><br>
                       </div>
                       <div class="col s6">
                         <h5 class="underline">Our Driver's Details</h5>

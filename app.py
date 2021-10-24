@@ -56,6 +56,7 @@ def newClaim():
             "tp_veh_make": request.form.get("tp_veh_make"),
             "tp_passnagers": request.form.get("tp_passnagers"),
             "tp_address": request.form.get("tp_address"),
+            "tp_email": request.form.get("tp_email"),
         }
         mongo.db.claimForm.insert_one(claimData)
     liability = mongo.db.liability.find().sort("liability", 1)

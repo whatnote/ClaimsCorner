@@ -69,8 +69,7 @@ h5{
 
 /* Claim form styling */
 
-label::placeholder {
-    
+label::placeholder {    
     font-size: 2.5rem;
   }
 
