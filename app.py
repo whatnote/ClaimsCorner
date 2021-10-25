@@ -58,7 +58,6 @@ def newClaim():
         return redirect(url_for("claims"))
 
     liability = mongo.db.liability.find().sort("liability", 1)
-    
     return render_template("newClaim.html", liability=liability)
 
 
@@ -67,6 +66,14 @@ def claims():
     claims = mongo.db.claimForm.find()
     return render_template("claims.html", claims=claims)
 
+
+@app.route("/editclaim/<claim_id>", methods=["GET", "POST"])
+def editclaim(claim_id):
+    claim = mongo.db.claimForm.find_one({"_id": ObjectId(claim_id)})
+    liability = mongo.db.liability.find().sort("liability", 1)
+    return render_template(
+        "editclaim.html", claim=claim, liability=liability)
+ 
 
 @app.route("/register", methods=["GET", "POST"])
 def register():

@@ -22,7 +22,7 @@
               <div class="collapsible-body">
                 <div class="row">
                   <div class="col s6 center-align">
-                    <a href="" class="btn-small light-blue lighten-1">Edit Claim</a>
+                    <a href="{{ url_for('editclaim', claim_id=claim._id) }}" class="btn-small light-blue lighten-1">Edit Claim</a>
                   </div>
                   <div class="col s6 center-align">
                     <a href="" class="btn-small green accent-4">Delete Claim</a>
