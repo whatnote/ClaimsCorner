@@ -22,26 +22,32 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="#">Profile</a></li>
                 <li><a href="{{ url_for('about') }}">About</a></li>
-                <li><a href="{{ url_for('newClaim') }}">New Claim</a></li>
-                <li><a href="{{ url_for('claims') }}">Claims</a></li>
-                <li><a href="#">Diary</a></li>                                
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li>              
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>              
+                {% if session.user %}
+                  <li><a href="{{ url_for('newClaim') }}">New Claim</a></li>
+                  <li><a href="{{ url_for('claims') }}">Claims</a></li>
+                  <li><a href="#">Diary</a></li>                                
+                  <li><a href="{{ url_for('logout') }}">Log Out</a></li>              
+                {% else %}
+                  <li><a href="{{ url_for('login') }}">Log In</a></li>
+                  <li><a href="{{ url_for('register') }}">Register</a></li>              
+                {% else %}
               </ul>
             </div>
           </nav>
         <!-- side nav bar-->
-          <ul class="sidenav" id="mobile-demo">
-            <li><a href="#">Profile</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Profile</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          {% if session.user %}
             <li><a href="{{ url_for('newClaim') }}">New Claim</a></li>
             <li><a href="{{ url_for('claims') }}">Claims</a></li>
             <li><a href="#">Diary</a></li>                                
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>              
+          {% else %}
             <li><a href="{{ url_for('login') }}">Log In</a></li>
-            <li><a href="{{ url_for('register') }}">Register</a></li>      
-          </ul>
+            <li><a href="{{ url_for('register') }}">Register</a></li>              
+          {% else %}
+        </ul>
 
     </header>
 
