@@ -19,15 +19,15 @@
             <div class="nav-wrapper text-shadow  light-blue accent-4">
               <a href="#" class="brand-logo leftpadding">Claims <span class="corner">Corner</span></a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-              <ul class="right hide-on-med-and-down">
-                <li><a href="#">Profile</a></li>
-                <li><a href="{{ url_for('about') }}">About</a></li>
+              <ul class="right hide-on-med-and-down">                                                 
                 {% if session.user %}
+                  <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                   <li><a href="{{ url_for('newClaim') }}">New Claim</a></li>
                   <li><a href="{{ url_for('claims') }}">Claims</a></li>
                   <li><a href="#">Diary</a></li>                                
                   <li><a href="{{ url_for('logout') }}">Log Out</a></li>              
                 {% else %}
+                  <li><a href="{{ url_for('about') }}">About</a></li>
                   <li><a href="{{ url_for('login') }}">Log In</a></li>
                   <li><a href="{{ url_for('register') }}">Register</a></li>              
                 {% endif %}
@@ -35,19 +35,19 @@
             </div>
           </nav>
         <!-- side nav bar-->
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Profile</a></li>
-          <li><a href="{{ url_for('about') }}">About</a></li>
+          <ul class="sidenav" id="mobile-demo">            
           {% if session.user %}
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('newClaim') }}">New Claim</a></li>
             <li><a href="{{ url_for('claims') }}">Claims</a></li>
             <li><a href="#">Diary</a></li>                                
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>              
           {% else %}
+            <li><a href="{{ url_for('about') }}">About</a></li>
             <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>              
           {% endif %}
-        </ul>
+          </ul>
 
     </header>
 

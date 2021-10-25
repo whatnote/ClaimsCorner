@@ -54,8 +54,11 @@ def newClaim():
             "tp_email": request.form.get("tp_email"),
         }
         mongo.db.claimForm.insert_one(claimData)
+        flash("Claim Successfully Added!")
+        return redirect(url_for("claims"))
+
     liability = mongo.db.liability.find().sort("liability", 1)
-    flash("Claim Successfully Added!")
+    
     return render_template("newClaim.html", liability=liability)
 
 
