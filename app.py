@@ -68,6 +68,13 @@ def claims():
     return render_template("claims.html", claims=claims)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    claims = list(mongo.db.claimForm.find({"$text": {"$search": query}}))
+    return render_template("claims.html", claims=claims)
+
+
 @app.route("/editclaim/<claim_id>", methods=["GET", "POST"])
 def editclaim(claim_id):
     if request.method == "POST":
@@ -105,6 +112,13 @@ def editclaim(claim_id):
     liability = mongo.db.liability.find().sort("liability", 1)
     return render_template(
         "editclaim.html", claim=claim, liability=liability)
+
+
+@app.route("/delete_claim/<claim_id>")
+def delete_claim(claim_id):
+    mongo.db.claimForm.remove({"_id": ObjectId(claim_id)})
+    flash("Task Successfully Deleted")
+    return redirect(url_for("claims"))
 
 
 @app.route("/register", methods=["GET", "POST"])
