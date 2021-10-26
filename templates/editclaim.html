@@ -8,37 +8,41 @@
       <form class="col s12" method="POST" action="{{  url_for('editclaim', claim_id=claim._id)}} ">
         <div class="row">
           <div class="input-field col s6">
-            <input id="client_name" name="client_name" minlength="5" maxlength="25" type="text" class="validate">
+            <input id="client_name" name="client_name" minlength="5" maxlength="25" value="{{claim.client_name}}" type="text" class="validate">
             <label for="client_name">Client Name</label>
           </div>
           <div class="input-field col s6">
-            <input id="contact_number" name="contact_number" type="text" class="validate">
+            <input id="contact_number" name="contact_number" type="text" value="{{claim.contact_number}}" class="validate">
             <label for="contact_number">Contact Number</label>
           </div>          
         </div>  
         <div class="row">
           <div class="input-field col s6">
-            <input id="email_address" name="email_address" type="text" class="validate">
+            <input id="email_address" name="email_address"  type="text" value="{{claim.email_address}}" class="validate">
             <label for="email_address">Email Address</label>
           </div>
         </div>          
         <div class="row">
   <!-- liabilty picker circumstanse and incident date-->
           <div class="input-field col s6">
-            <input id="incident_date" name="incident_date" type="text" class="datepicker validate">           
+            <input id="incident_date" name="incident_date" type="text" value="{{claim.incident_date}}" class="datepicker validate">           
             <label for="incident_date">Incident Date</label>
           </div>
           <div class="input-field col s6">
             <select id="liability" name="liability" class="validate" required>
-              <option value="" disabled selected>Liability?</option>
+              <option value="" disabled >Liability?</option>
               {% for liab in liability %}
-              <option value="{{ liab.liability }}">{{ liab.liability }}</option>
+                {% if liab.liability == claim.liability %}
+                <option value="{{ liab.liability }}" selected>{{ liab.liability }}</option>
+                {% else %}
+                <option value="{{ liab.liability }}">{{ liab.liability }}</option>
+                {% endif %}
               {% endfor %}
             </select>          
           </div>
           <div class="input-field col s12">
             <textarea id="circumstances" name="circumstances" class="materialize-textarea validate" required
-            minlength="5" maxlength="400"></textarea>
+            minlength="5" maxlength="400">{{-claim.circumstances-}}</textarea>
             <label for="circumstances">Circumstances</label>
           </div>
         </div>            
@@ -56,11 +60,11 @@
 
         <div class="row">
           <div class="input-field col s4">
-            <input id="registration" name="registration" type="text" class="validate">     
+            <input id="registration" name="registration" type="text" value="{{claim.registration}}" class="validate">     
             <label for="registration">Registration</label>
           </div>
           <div class="input-field col s4">
-            <input id="make_and_model" name="make_and_model" type="text" class="validate">
+            <input id="make_and_model" name="make_and_model" type="text" value="{{claim.make_and_model}}" class="validate">
             <label for="make_and_model">Make and Model</label>
           </div>
           <div class="input-field center-align col s4">
@@ -78,27 +82,27 @@
         <div class="row">
           <h2>Driver Details</h2>
             <div class="input-field col s6">
-              <input id="driver_name" name="driver_name" type="text" class="validate">
+              <input id="driver_name" name="driver_name" type="text" value="{{claim.driver_name}}" class="validate">
               <label for="driver_name">Name</label>
             </div>
             <div class="input-field col s6">
-              <input id="dob" name="dob" type="text" class="validate datepicker">
+              <input id="dob" name="dob" type="text" value="{{claim.dob}}" class="validate datepicker">
               <label for="dob">Date of Birth</label>
             </div>
             <div class="input-field col s6">
-              <input id="lic_held" name="lic_held" type="text" class="validate">
+              <input id="lic_held" name="lic_held" type="text" value="{{claim.lic_held}}" class="validate">
               <label for="lic_held">Licence Held</label>
             </div>
             <div class="input-field col s6">
-              <input id="date_lic_passed" name="date_lic_passed" type="text" class="validate datepicker">
+              <input id="date_lic_passed" name="date_lic_passed" type="text" value="{{claim.date_lic_passed}}" class="validate datepicker">
               <label for="date_lic_passed">Date Relevant Test Pass</label>
             </div>
             <div class="input-field col s6">
-              <input id="any_points" name="any_points" type="text" class="validate">
+              <input id="any_points" name="any_points" type="text" value="{{claim.any_points}}" class="validate">
               <label for="any_points">Any Points</label>
             </div>
             <div class="input-field col s6">
-              <input id="medical_conditoins" name="medical_conditoins" type="text" class="validate">
+              <input id="medical_conditoins" name="medical_conditoins" type="text" value="{{claim.medical_conditoins}}" class="validate">
               <label for="medical_conditoins">Any Medical Conditions</label>
             </div>
         </div>
@@ -107,37 +111,38 @@
         <div class="row">  
           <h2>Third party Details</h2>
             <div class="input-field col s6">
-              <input id="tp_name" name="tp_name" type="text" class="validate">
+              <input id="tp_name" name="tp_name" type="text" value="{{claim.tp_name}}" class="validate">
               <label for="tp_name">Third Party's Name</label>
             </div>
             <div class="input-field col s6">
-              <input id="tp_number" name="tp_number" type="text" class="validate">
+              <input id="tp_number" name="tp_number" type="text" value="{{claim.tp_number}}" class="validate">
               <label for="tp_number">Contact Number</label>
             </div>
             <div class="input-field col s6">
-              <input id="tp_reg" name="tp_reg" type="text" class="validate">
+              <input id="tp_reg" name="tp_reg" type="text" value="{{claim.tp_reg}}" class="validate">
               <label for="tp_reg">Third Party Vehicle Reg</label>
             </div>
             <div class="input-field col s6">
-              <input id="tp_email" name="tp_email" type="text" class="validate">
+              <input id="tp_email" name="tp_email" type="text" value="{{claim.tp_email}}" class="validate">
               <label for="tp_email">Third Party Email Address</label>
             </div>
             <div class="input-field col s6">
-              <input id="tp_veh_make" name="tp_veh_make" type="text" class="validate">
+              <input id="tp_veh_make" name="tp_veh_make" type="text" value="{{claim.tp_veh_make}}" class="validate">
               <label for="tp_veh_make">Third Party Vehicle make and colour</label>
             </div>
             <div class="input-field col s6">
-              <input id="tp_address" name="tp_address" type="text" class="validate">
+              <input id="tp_address" name="tp_address" type="text" value="{{claim.tp_address}}" class="validate">
               <label for="tp_address">TP Address</label>
             </div>
             <div class="input-field col s6">
-              <input id="tp_passnagers" name="tp_passnagers" type="text" class="validate">
+              <input id="tp_passnagers" name="tp_passnagers" type="text" value="{{claim.tp_passnagers}}" class="validate">
               <label for="tp_passnagers">Total number of people in car?</label>
             </div>
         </div>
   <!--submit claim button-->
         <div class="row">
-          <div class="col s12 center-align  "> <button class="btn-large light-blue accent-4" type="submit">Edit Claim</button>
+          <div class="col s6 center-align  "> <a href="{{ url_for('claims')}}" class="btn-large light-blue accent-4">Cancel</a> </div>
+          <div class="col s6 center-align  "> <button class="btn-large light-blue accent-4" type="submit">Edit Claim</button>
           </div>
         </div>
       </form>
