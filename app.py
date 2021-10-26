@@ -52,6 +52,7 @@ def newClaim():
             "tp_passnagers": request.form.get("tp_passnagers"),
             "tp_address": request.form.get("tp_address"),
             "tp_email": request.form.get("tp_email"),
+            "created_by": session["user"]
         }
         mongo.db.claimForm.insert_one(claimData)
         flash("Claim Successfully Added!")
@@ -69,6 +70,37 @@ def claims():
 
 @app.route("/editclaim/<claim_id>", methods=["GET", "POST"])
 def editclaim(claim_id):
+    if request.method == "POST":
+        own_damage = "on" if request.form.get("own_damage") else "off"
+        claimData = {
+            "client_name": request.form.get("client_name"),
+            "contact_number": request.form.get("contact_number"),
+            "email_address": request.form.get("email_address"),
+            "incident_date": request.form.get("incident_date"),
+            "liability": request.form.get("liability"),
+            "circumstances": request.form.get("circumstances"),
+            "registration": request.form.get("registration"),
+            "make_and_model": request.form.get("make_and_model"),
+            "any_ad": request.form.get("any_ad"),
+            "driver_name": request.form.get("driver_name"),
+            "dob": request.form.get("dob"),
+            "lic_held": request.form.get("lic_held"),
+            "date_lic_passed": request.form.get("date_lic_passed"),
+            "any_points": request.form.get("any_points"),
+            "medical_conditoins": request.form.get("medical_conditoins"),
+            "tp_name": request.form.get("tp_name"),
+            "tp_number": request.form.get("tp_number"),
+            "tp_reg": request.form.get("tp_reg"),
+            "tp_veh_make": request.form.get("tp_veh_make"),
+            "tp_passnagers": request.form.get("tp_passnagers"),
+            "tp_address": request.form.get("tp_address"),
+            "tp_email": request.form.get("tp_email"),
+            "created_by": session["user"]
+        }
+        mongo.db.claimForm.update({"_id": ObjectId(claim_id)}, claimData)
+        flash("Claim Successfully Updated!")
+        return redirect(url_for("claims"))
+
     claim = mongo.db.claimForm.find_one({"_id": ObjectId(claim_id)})
     liability = mongo.db.liability.find().sort("liability", 1)
     return render_template(
