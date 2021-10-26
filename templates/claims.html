@@ -23,10 +23,7 @@
 
         <ul class="collapsible popout">
           <li>
-            <div class="row">
-              <span class="gap center-align">Client </span> <span class="gap center-align">Incident Date </span> <span class="gap center-align">Vehicle Registration</span></div>
-               
-            </div>
+
             {% for claim in claims %}
             <li>
               <div class="collapsible-header">
@@ -38,7 +35,7 @@
             
               <div class="collapsible-body">
                 <div class="row">
-                  <div class="col s6 center-align">
+                  <div class="col s12 m6 center-align">
                     {% if session.user|lower == claim.created_by|lower %}
                     <a href="{{ url_for('editclaim', claim_id=claim._id) }}" class="btn-small light-blue lighten-1">Edit Claim</a>
                   </div>
@@ -59,20 +56,20 @@
                 </div>
 
                 <div class="row">
-                  <div class="col s12">
+                  <div class="col s12 ">
                     <p>
                       <h5 class="underline">Circumstances</h5>{{ claim.circumstances }}
                     </p>                    
                   </div>
                   <div class="row">
-                    <div class="col s6">
+                    <div class="col s12 m6">
                       <span class="detsGap">Liability: </span><span>{{ claim.liability }}</span><br>
                     </div>
                   </div>
 
 
                   <div class="row">
-                    <div class="col s6">
+                    <div class="col s12 m6">
                       <h5 class="underline">Vehicle Details</h5>
                       <span class="detsGap">Registration: </span><span>{{ claim.registration }}</span><br>
                       <span class="detsGap">Make and Model: </span><span>{{ claim.make_and_model }}</span><br>
@@ -82,7 +79,7 @@
 
 
                     <div class="row">
-                      <div class="col s6">
+                      <div class="col s12 m6">
                         <h5 class="underline">Third Party Details</h5>
                         <span class="detsGap">TP Driver: </span><span>{{ claim.tp_name }}</span><br>
                         <span class="detsGap">TP Vehicle: </span><span>{{ claim.tp_reg }}</span><br>
@@ -91,7 +88,7 @@
                         <span class="detsGap">Address:</span><span></span><br>
                         <span class="detsGap">No. of People in TP vehicle:</span><span>{{ claim.tp_passnagers }}</span><br>
                       </div>
-                      <div class="col s6">
+                      <div class="col s12 m6">
                         <h5 class="underline">Our Driver's Details</h5>
                         <span class="detsGap">Driver's Name: </span><span>{{ claim.driver_name }}</span><br>
                         <span class="detsGap">Date of Birth: </span><span>{{ claim.dob }}</span><br>
