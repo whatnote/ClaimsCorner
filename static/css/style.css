@@ -76,3 +76,56 @@ label::placeholder {
  form h2{
     font-size:2rem;
  }
+
+
+ /* footer styling */
+
+ .social-networks {
+    text-align: center;
+  }
+  
+  .social-networks,
+  li {
+    display: inline;
+  }
+
+  .page-footer{
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+  }
+  
+  .social-networks i {
+    font-size: 2.5rem;
+    margin-left: 10%;
+    margin-right: 10%;
+      
+    color: #696666;
+    
+  }
+  
+  .ptext {
+    color: #696666;
+    text-align: center;
+    font-family: "karla", "sans-serif";
+    font-size: 1.5rem;
+
+  }
+  
+  .makerlink {
+    color: black;
+    text-align: center;
+    font-family: "karla", "sans-serif";
+    font-size: 1.5rem;
+  }
+
+  /* sticky footer */
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      

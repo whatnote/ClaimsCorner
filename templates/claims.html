@@ -50,9 +50,7 @@
                                       
                   <span class="detsGap">Contact Number: </span><a href="tel:{{ claim.contact_number }}">{{ claim.contact_number }}</a><br>                    
                   <span class="detsGap">Contact Email: </span><a href = "mailto:{{ claim.email_address }}">{{ claim.email_address }}</a><br> 
-                  <a href = "mailto:{{ claim.email_address }}?subject = {{ claim.incident_date }} {{ claim.registration }} = Message">
-                    Send Feedback
-                    </a>                
+                  <a href="mailto:{{ claim.email_address }}?subject={{ claim.registration }} {{ claim.incident_date }} {{ claim.driver_name }}">Email is linked here.</a>               
                 </div>
 
                 <div class="row">

@@ -34,7 +34,9 @@
 
 ## About
 
-Claims corner is a proof of concept for a claims portal to be utilised by an insurer broker connecting the to their client to assit in providing faster and easier claims reporting. The stratergy is the broker give their client access to our portal to report claims, in return for this the client has a ready made claims record and archive. 
+Claims corner is a proof of concept for a claims portal to be utilised by an insurer broker connecting them directly to their client to assit in providing faster and easier claims reporting. The stratergy is the broker gives their client access to the portal to report claims, in return for this the client has a ready made claims record and archive. 
+
+The benefit for the broker, they become more integrated with the client infostrature, making it more difficult for them to move to another broker.
 
 ## UX
 
@@ -42,24 +44,27 @@ Claims corner is a proof of concept for a claims portal to be utilised by an ins
 
 User stories fall into two categories. 
 
-Client Facing and Broker facing. 
-
+Client Facing 
 - Client specific log on.
 - Ability to report motor claims. 
-- Able to report property claims.
-- A client specific login. 
+- able to update details of the claim when they become available
+- able to contact the broker directly. 
+- able to contact the broker directly to talk about a specific claim.
+
+Broker facing. 
+- A broker specific specific login. 
 - the broker needs to able to see all client's claims. 
-- ability to upload photos. 
-- Able to upload video footage.
-- Able to veiw posiiton of the claim. 
-- Able to view actions points on the claim. 
-- Able to operate a diary system
-- able to see the MI on their claims portfiolo. 
+- Able to operate a diary system.
+- Able to contact the client specifically about a specific claim.
+
 
 ### Research
 
-This game is derived from the card game, higher or lower. I replaced the playing cards with history cards.
-I looked at several higher or lower games via youtube and the wider web and almost all didn’t use playing cards, just numbers. I did find an Udemy course, that showed you how to make a high lower claim game using JavaScript. I found this invaluable as it showed you how to construct many of the elements needed to make the game.
+Having worked in the insurance for 20 years, I've foound the claims function in computer systems to at best, an after thought, and no time is given to actually making a system that assists in teh handling of claims. 
+
+With this I have a wish list of what a claims system should have to enable better handling of claims and removing the need to retype or copy and paste infomation. 
+
+With this, 
 
 - In particular:
   - The shuffle
