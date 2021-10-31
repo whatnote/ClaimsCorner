@@ -3,6 +3,8 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
     $('.tooltipped').tooltip();
     $("select").formSelect();
+    $('.modal').modal();
+    $('.fixed-action-btn').floatingActionButton();
     $(".datepicker").datepicker({
       format: "dd, mm, yyyy",
       yearRange: 60,
@@ -12,14 +14,7 @@ $(document).ready(function(){
       }  
   });
 
-
-  $(document).ready(function(){
-    $('.fixed-action-btn').floatingActionButton();
-  });
-
-  $(document).ready(function(){
-    $('.modal').modal();
-  });
+  
        
   
   validateMaterializeSelect();
