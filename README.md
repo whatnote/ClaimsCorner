@@ -69,7 +69,10 @@ The basis of the webiste is to present a one time only data entry. Once that cla
 
 ### Styling
 
-The styling borrowed from the company I currenntly work for, Anthony Jones Insurance Brokers. [Anthony Jones Insurance Brokers ](https://www.anthonyjones.com/make-a-motor-claim/) the main feature being the "Anthony Jones' Blue". I've then tried to keep things as minimal as possible to avoid contrast issues.                                                                                                                                           
+The styling borrowed from the company I currenntly work for, Anthony Jones Insurance Brokers. [Anthony Jones Insurance Brokers ](https://www.anthonyjones.com/make-a-motor-claim/) the main feature being the "Anthony Jones' Blue". I've then tried to keep things as minimal as possible to avoid contrast issue. The color red was then used to style any button button that wasn't used to . 
+
+The font I've used is Lato, if works well when small, making it ideal for use on phones and tablets, it also scales well. 
+
 
 ### Wireframes
 
@@ -82,34 +85,20 @@ The styling borrowed from the company I currenntly work for, Anthony Jones Insur
 
 ### Existing-Features
 
-- Deal button
-- Deals 10 cards at random from a deck of 42 cards.
-- Each card contains:
-  - A name of event
-  - A Picture of the event.
-  - Year of Event
-  - A more info button on each card, provides a short paragraph about the historical event.
-  - In addition to the more info card a link to a website describes the event in even more detail.
-- A Score bored
-- Compare your score against a benchmark of score
-- Add card - a separate page that allows users to suggest a new card to be added to teh deck.
-
-### Game-Controls
-
-- home screen - this expains the game and how to play it.
-- A Play Button - Stars the game.
-- A Before of After button - These are your game controlers, pick the correct asswer and you'll score a point.
-- A scoreboard - Points are logged here.
-- A more info button - on the reveal card addation infomation is available about the event.
-- A link for additional information - If you want to read even more about the subject this will take you to a link.
-- A play again button - Take yuou back to the start of the game.
+- Register Function
+- LogOn Function
+- Able to Add new claims.
+- Able to edit new claim
+- Able to delete claims
+- Search feature: 
+  - able to seatch for claims via their:
+    - registration
+    - driver's name
+    - Third party's registration
 
 ### Features-Left-To-Implement
 
-- I want levels of difficulty.
-  - Hard
-  - Medium
-  - Easy
+ - include a MI facility, give hte client an insite to their claims. 
 
 ## Technologies-Used
 
