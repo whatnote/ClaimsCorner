@@ -1,4 +1,4 @@
-![Picture of deployed project ](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/WriteUpPics/historyBeoreOrAfter.png)
+![Picture of deployed project ]https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/screenMockUp/claimsCorner.png)
 
 # [Claims Corner]https://github.com/whatnote/ClaimsCorner) - Milestone Project Three
 
