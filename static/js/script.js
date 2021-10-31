@@ -52,7 +52,7 @@ function sendMail(ClaimsCorner) {
     emailjs.send("gmail","claimsCornerEmail", {
         "from_name": ClaimsCorner.name.value,
         "from_email": ClaimsCorner.emailaddress.value,
-        "help_request": ClaimsCorner.projectsummary.value
+        "help_request": ClaimsCorner.helpRequest.value
     })    
     .then(
         function(response) {

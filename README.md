@@ -95,6 +95,11 @@ The font I've used is Lato, if works well when small, making it ideal for use on
     - registration
     - driver's name
     - Third party's registration
+- Contact feature: Client is able to contact for assistnace via:
+    - whatsapp
+    - telephone
+    - or via a contact form. 
+  
 
 ### Features-Left-To-Implement
 
@@ -286,19 +291,22 @@ The link to my repository can be found via this link:
 
 ### Content
 
-- Most of the code was written by me, where it's not I've commented the url by the borrowed section of code.
+- a lot of the code for project was lifted from the puttuing it all together course from the CODE Institute
+  Particularly the:
 
-- As mentioned above I did find an Udemy course, that showed you how to make a high lower claim game using JavaScript. I found this invaluable as it showed you how to construct many of the elements needed to make the game.
+  -  register 
+  -  logon 
+  -  log off 
 
-* In particular:
+  we're lifted directly from the course with just minor amendments to teh CSS. 
 
-  - The shuffle
-  - Scoring system
-  - Number of turns.
+- the claims list was mapped accross from the task list. as was the 
+- new claim 
+- edit and delete feature
+- searach 
 
-  A link to this course can be found [here](https://www.udemy.com/course/javascript-card-game/).
-
-- The game is clearly not an oringal idea but I would like to think my twist on it using historical events is.
+  
+  
 
 ### Media
 
