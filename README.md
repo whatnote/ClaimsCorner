@@ -1,6 +1,6 @@
 ![Picture of deployed project](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/screenMockUp/claimsCorner.png)
 
-# [Claims Corner]https://claims-corner.herokuapp.com/) - Milestone Project Three
+# [Claims Corner](https://claims-corner.herokuapp.com/) - Milestone Project Three
 
 ## Table of Contents
 
@@ -69,7 +69,7 @@ The basis of the webiste is to present a one time only data entry. Once that cla
 
 ### Styling
 
-The styling borrowed from the company I currenntly work for, Anthony Jones Insurance Brokers. [Anthony Jones Insurance Brokers ](https://www.anthonyjones.com/make-a-motor-claim/) the main feature being the "Anthony Jones' Blue". I've then triued to keep things as minimal as possible to hold 
+The styling borrowed from the company I currenntly work for, Anthony Jones Insurance Brokers. [Anthony Jones Insurance Brokers ](https://www.anthonyjones.com/make-a-motor-claim/) the main feature being the "Anthony Jones' Blue". I've then tried to keep things as minimal as possible to avoid contrast issues.                                                                                                                                           
 
 ### Wireframes
 
