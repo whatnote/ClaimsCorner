@@ -224,7 +224,7 @@ Scoreboard at the top of the page shows the current score
 
 ### Responsive-Testing
 
-The wibesite was set up as a mbile first wesite, the game type meant that hte cards only had to be above and below each other to work on mobile.
+The wibesite was set up as a mbile first website, the materialize class are excelement at re-scalling withouth the need to and array of @media queries. 
 
 #### Web Browser and DEvice Testing
 
@@ -287,32 +287,32 @@ The link to my repository can be found via this link:
 - Use "git clone" and paste the copied URL after it.
 - A clone of the project will be created locally on your machine.
 
-### Credits
+## Credits
 
 ### Content
 
-- a lot of the code for project was lifted from the puttuing it all together course from the CODE Institute
+- a lot of the code for project was lifted from the putting it all together from the [Backend Developenment course from the CODE Institute](https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopment), 
   Particularly the:
 
   -  register 
   -  logon 
   -  log off 
 
-  we're lifted directly from the course with just minor amendments to teh CSS. 
+  we're lifted directly from the course with just minor amendments to the CSS and html. 
 
-- the claims list was mapped accross from the task list. as was the 
+the claims list was mapped accross from the task list. as was the 
 - new claim 
 - edit and delete feature
-- searach 
+- search 
 
-  
-  
+In these particulary cases the code was amended to suite to the requirement of the user stories. 
 
-### Media
+the email connenction was lifted from the codeinstitute course. 
+#### Putting it all toghter - Sending email using emailJS [link to course here](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+IFD101+2017_T3/courseware/03d3f6524ad249d9b33e3336d156dfd0/e4710f80cdf34bffbd607bc102482d5c/)
 
-#### Pictures
 
-### Acknowledgements
+
+## Acknowledgements
 
 A special thanks to my Mentor Spencer Barriball for his guidance in the project. I also need to thank my partner Chrissy and my Daughter Abbey-Rae for allowing me a great many hours in front of the computer.
 
