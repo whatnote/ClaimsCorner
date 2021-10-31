@@ -51,8 +51,8 @@ nav li a{
 
 /* collapsible spacing*/
 .gap{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 h5{
@@ -69,7 +69,7 @@ h5{
 
 /* Claim form styling */
 
-label::placeholder {    
+label{    
     font-size: 2.5rem;
   }
 

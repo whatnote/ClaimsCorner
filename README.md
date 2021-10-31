@@ -34,9 +34,9 @@
 
 ## About
 
-Claims corner is a proof of concept for a claims portal to be utilised by an insurer broker connecting them directly to their client to assit in providing faster and easier claims reporting. The stratergy is the broker gives their client access to the portal to report claims, in return for this the client has a ready made claims record and archive. 
+Claims corner is a proof of concept for a claims portal to be utilised by an insurance broker connecting, the idea this will connect their client drectly to the broker, makign the reporting of claims faster and easier than just using emails. 
 
-The benefit for the broker, they become more integrated with the client infostrature, making it more difficult for them to move to another broker.
+The benefit for the broker it give the broker a uniique selling point; the broker is more integrated with the client's infostructure, making it more difficult for them to move to another broker.
 
 ## UX
 
@@ -48,7 +48,7 @@ Client Facing
 - Client specific log on.
 - Ability to report motor claims. 
 - able to update details of the claim when they become available
-- able to contact the broker directly. 
+- able to contact the broker directly if they're ubalb to log on
 - able to contact the broker directly to talk about a specific claim.
 
 Broker facing. 
@@ -60,27 +60,16 @@ Broker facing.
 
 ### Research
 
-Having worked in the insurance for 20 years, I've foound the claims function in computer systems to at best, an after thought, and no time is given to actually making a system that assists in teh handling of claims. 
+Having worked in the jandling of claim the in the insurance industry for 20 years, I've foound the claims function on every computer system I've used, simply isn't up the to the task of handling claims quicly, the adminstration can take more the 25% of you day with having to re-key data and copy and paste data. 
 
 With this I have a wish list of what a claims system should have to enable better handling of claims and removing the need to retype or copy and paste infomation. 
 
-With this, 
+The basis of the webiste is to present a one time only data entry. Once that claim os fully logged the client of claims handler has not to retype into an email again. 
 
-- In particular:
-  - The shuffle
-  - Scoring system
-  - Scoring system
-  - Number of turns.
-
-A link to this course can be found [here](https://www.udemy.com/course/javascript-card-game/).
-
-I switched the idea from higher or lower to before or after as this fitted better with the content of the game, did an event happen before or after the previous event.
 
 ### Styling
 
-I wanted the game to resemble a deck of card and the appearance to look old, as if the cards have been used. With this I opted for a slightly of white colour for the background of the cards.
-The text also had to look historical, the typewriter font helped finish off the look of the game.
-The next step I wanted cards to rotate to reveal their information, I also wanted the additional historical to appear after the questions are answered.
+The styling borrowed from the company I currenntly work for, Anthony Jones Insurance Brokers. [Anthony Jones Insurance Brokers ](https://www.anthonyjones.com/make-a-motor-claim/) the main feature being the "Anthony Jones' Blue". I've then triued to keep things as minimal as possible to hold 
 
 ### Wireframes
 
