@@ -4,13 +4,12 @@ $(document).ready(function(){
     $('.tooltipped').tooltip();
     $("select").formSelect();
     $(".datepicker").datepicker({
-      format: "dd mmmm, yyyy",
+      format: "dd, mm, yyyy",
       yearRange: 60,
       showClearBtn: true,
       i18n: {
           done: "Select"
-      }
-    
+      }  
   });
 
 
@@ -18,7 +17,6 @@ $(document).ready(function(){
     $('.fixed-action-btn').floatingActionButton();
   });
 
-  
   $(document).ready(function(){
     $('.modal').modal();
   });
@@ -53,6 +51,21 @@ $(document).ready(function(){
   }
 });
 
+// email function
 
-
-
+function sendMail(ClaimsCorner) {
+    emailjs.send("gmail","claimsCornerEmail", {
+        "from_name": ClaimsCorner.name.value,
+        "from_email": ClaimsCorner.emailaddress.value,
+        "help_request": ClaimsCorner.projectsummary.value
+    })    
+    .then(
+        function(response) {
+            console.log("SUCCESS", response);
+        },
+        function(error) {
+            console.log("FAILED", error);
+        }
+    );
+    return false;  // To block from loading a new page
+}

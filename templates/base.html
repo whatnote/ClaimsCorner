@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      type="text/css">
+
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}" type="text/css">
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_QAJYOOgw4FFObAw1KFezU");        
+      })();
+    </script>
     {% block styles %}
     {% endblock %}
     <title>Claims Corner</title>
@@ -24,8 +34,7 @@
                 {% if session.user %}
                   <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                   <li><a href="{{ url_for('newClaim') }}">New Claim</a></li>
-                  <li><a href="{{ url_for('claims') }}">Claims</a></li>
-                  <li><a href="#">Diary</a></li>                                
+                  <li><a href="{{ url_for('claims') }}">Claims</a></li>                           
                   <li><a href="{{ url_for('logout') }}">Log Out</a></li>              
                 {% else %}
                   <li><a href="{{ url_for('about') }}">About</a></li>
@@ -40,8 +49,7 @@
           {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('newClaim') }}">New Claim</a></li>
-            <li><a href="{{ url_for('claims') }}">Claims</a></li>
-            <li><a href="#">Diary</a></li>                                
+            <li><a href="{{ url_for('claims') }}">Claims</a></li>                                     
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>              
           {% else %}
             <li><a href="{{ url_for('about') }}">About</a></li>
@@ -90,29 +98,22 @@
             <div class="row">
         <div class="col s12">
           <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix"></i>
-              <input type="text" id="autocomplete-input" class="autocomplete">
-              <label for="autocomplete-input">Name</label>
-            </div>
-            <div class="input-field col s12">
-              <i class="material-icons prefix"></i>
-              <input type="text" id="autocomplete-input" class="autocomplete">
-              <label for="autocomplete-input">Email Address</label>
-            </div>
-            <div class="input-field col s12">
-              <i class="material-icons prefix"></i>
-              <input type="text" id="autocomplete-input" class="autocomplete">
-              <label for="autocomplete-input">Message</label>
-            </div>
+            <form onsubmit="return sendMail(this);" method="POST">
+              <form onsubmit="return sendMail(this);">
+                <input type="text" name="name" class="autocomplete" id="fullname" placeholder="Name" required/>
+                <input type="text" name="emailaddress" class="autocomplete" id="emailaddress" placeholder="Email" required/>
+                <input type="text" rows="5" name="projectsummary" class="autocomplete" id="projectsummary" placeholder="Message" required>
+                <button type="submit" class="modal-close waves-effect waves-green btn-flat right">Send for Help!</button>
+            </form>
+
+
+         
           </div>
         </div>
       </div>
       
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Send Message</a>
-    </div>
+   
   </div>
           
 
