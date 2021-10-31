@@ -1,6 +1,6 @@
-![Picture of deployed project ]https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/screenMockUp/claimsCorner.png)
+![Picture of deployed project](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/screenMockUp/claimsCorner.png)
 
-# [Claims Corner]https://github.com/whatnote/ClaimsCorner) - Milestone Project Three
+# [Claims Corner]https://claims-corner.herokuapp.com/) - Milestone Project Three
 
 ## Table of Contents
 
