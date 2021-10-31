@@ -73,7 +73,10 @@ The styling borrowed from the company I currenntly work for, Anthony Jones Insur
 
 ### Wireframes
 
-![Desktop Home Screen ](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/wireframes/Desktop%20Home%20Screen.png)
+![Mobile Home Scree](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/wireframe/MobileWireframe.png)
+
+
+![Desktop Home Screen ](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/wireframe/DesktopWireframe.png)
 
 ## Features
 
