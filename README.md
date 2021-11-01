@@ -219,13 +219,29 @@ The wibesite was set up as a mbile first website, the materialize classes are ex
 
 #### Web Browser and Device Testing
 
-![Web Browser and DEvices Testing](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/WriteUpPics/devices%20and%20webbrowser%20tests.png)
+![Web Browser and DEvices Testing](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/devices%20and%20webbrowser%20tests.png)
+
 
 ### Additional-Testing
 
-#### Add Card Form.
+To Test the contact form:
 
-To test the add card form I went to the card form and loaded my deatils.
+Open the modal and enter the message:
+![Message in Modal](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/devices%20and%20webbrowser%20tests.png)
+
+When you press send, the message disappears. 
+
+This message is received by the developer. 
+![messager to developer](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/devices%20and%20webbrowser%20tests.png)
+
+
+This email is sent to the client. 
+![Ackknowledgement to client](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/devices%20and%20webbrowser%20tests.png)
+
+
+#### Contact Form.
+
+
 
 I entered my details pressed send and then checked my email for the message.
 
