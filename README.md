@@ -82,7 +82,7 @@ The font I've used is Lato, if works well when small, making it ideal for use on
 
 ## Features
 
-### Existing-Features
+### Existing Features
 
 - Register Function
 - LogOn Function
@@ -100,7 +100,7 @@ The font I've used is Lato, if works well when small, making it ideal for use on
     - or via a contact form. 
   
 
-### Features-Left-To-Implement
+### Features Left To Implement
 
  - Include a MI facility, give the client a graphical presentation of their claims data.
  - Add financials of claims costs. 
@@ -186,7 +186,7 @@ The font I've used is Lato, if works well when small, making it ideal for use on
 
 ## Testing
 
-### Testing-User-Stories
+### Testing User Stories
 
 The website has the following features:
 
@@ -223,7 +223,7 @@ The wibesite was set up as a mbile first website, the materialize classes are ex
 ![Web Browser and DEvices Testing](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/devices%20and%20webbrowser%20tests.png)
 
 
-### Additional-Testing
+### Additional Testing
 
 #### Contact Form.
 
@@ -241,14 +241,14 @@ This message is received by the developer.
 This email is sent to the client. 
 ![Ackknowledgement to client](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/AckEmail.png)
 
-### HTML-And-CSS-Validation
+### HTML And CSS Validation
 
 I used the website, https://validator.w3.org/#validate_by_input, to check my html code. There are serverl erros and warning shown but all these relate to the jinja template notation so were ignored. 
 
 ![Image of html test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/htmlTest.jpg)
 
 I used the website. https://jigsaw.w3.org/css-validator/, to check the code for my CSS, fortunatley it showed no errors.
-![Image of css test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/htmlTest.jpg)
+![Image of css test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/CSSTest.jpg)
 
 ### Python Testing
 
@@ -266,8 +266,20 @@ Gitpod was used to devleoped the site, with progress being comitted to git via t
 
 ### Deployment of Page
 
+Deployment the Live Version
+1. Goto [github](https://github.com/)
+2. look for whatnote's page [whatnote's page](https://github.com/whatnote)
+3. click on the repositories [Whatnote's Repo](https://github.com/whatnote/ClaimsCorner)
+4. click on Claims Corner
+5. click on the link, https://claims-corner.herokuapp.com/ to the rightcentre highlighted with green. 
 
 
+To Run Local
+1. Goto [github](https://github.com/)
+2. look for whatnote's page [whatnote's page](https://github.com/whatnote)
+3. click on the repositories [Whatnote's Repo](https://github.com/whatnote/ClaimsCorner)
+4. click on Claims Corner
+5. Now click on code
 
 
 ### Repository Link
