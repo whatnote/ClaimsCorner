@@ -1,131 +1,106 @@
 {% extends "base.html" %}
 {% block content %}
 
-        <h2 class="light-blue-text text-darken-4 center-align">Claims</h2>
-        <!-- Search bar-->
-        <div class="row card-panel grey lighten-5">
-          <form action="{{ url_for('search') }}" method="post" class="col s12">
-              <div class="row valign-wrapper center-align">
-                  <div class="input-field col s12 m8">
-                      <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-                      <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                      <label for="query">Search Tasks</label>
-                  </div>
-                  <div class="col s12 m4">
-                      <a href="{{ url_for('claims') }}" class="red btn text-shadow">Reset</a>
-                      <button type="submit" class="light-blue btn text-shadow">
-                          <i class="fas fa-search left"></i> Search
-                      </button>
-                  </div>
-              </div>
-          </form>
+<h2 class="light-blue-text text-darken-4 center-align">Claims</h2>
+<!-- Search bar-->
+<div class="row card-panel grey lighten-5">
+  <form action="{{ url_for('search') }}" method="post" class="col s12">
+    <div class="row valign-wrapper center-align">
+      <div class="input-field col s12 m8">
+        <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+        <input type="text" name="query" id="query" minlength="3" class="validate" required>
+        <label for="query">Search Tasks</label>
       </div>
+      <div class="col s12 m4">
+        <a href="{{ url_for('claims') }}" class="red btn text-shadow">Reset</a>
+        <button type="submit" class="light-blue darken-1 btn text-shadow">
+          <i class="fas fa-search left"></i> Search
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
 
-        <ul class="collapsible popout">
-          <li>
-            <!-- claims headings click here for more infomation-->
-            {% for claim in claims %}
-            <li>
-              <div class="collapsible-header">
-                <i class="fas fa-caret-down"></i><span class="gap">{{ claim.client_name }} </span> <span
-                  class="gap">{{ claim.incident_date }} </span> <span class="gap">{{ claim.registration }}</span>
+<ul class="collapsible popout">
+  <!-- claims headings click here for more infomation-->
+  {% for claim in claims %}
+  <li>
+    <div class="collapsible-header">
+      <i class="fas fa-caret-down"></i><span class="gap">{{ claim.client_name }}</span>
+       <span class="gap">{{ claim.incident_date }} </span> <span class="gap">{{ claim.registration }}</span>
+    </div>
+    <div class="collapsible-body">
+      <div class="row">
+        <!-- Buttone to edit and delete claim-->
+        <div class="col s12 m6 center-align">
+          {% if session.user|lower == claim.created_by|lower %}
+          <a href="{{ url_for('editclaim', claim_id=claim._id) }}" class="btn-small light-blue lighten-1">Edit
+            Claim</a>
+        </div>
+        <div class="col s6 center-align">
+          <a href="{{ url_for('delete_claim', claim_id=claim._id) }}" class="btn-small green accent-4">Delete
+            Claim</a>
+          {% endif %}
+        </div>
+      </div>
+      <!--contact detaisl for client-->
+      <div class="row">      
+        <div class="col s12">
+          <span class="detsGap">Contact Number: </span><a
+            href="tel:{{ claim.contact_number }}">{{ claim.contact_number }}</a><br>
+          <span class="detsGap">Contact Email: </span><a
+            href="mailto:{{ claim.email_address }}">{{ claim.email_address }}</a><br>
+          <a
+            href="mailto:{{ claim.email_address }}?subject={{ claim.registration }} - {{ claim.incident_date }} - {{ claim.driver_name }}">Email
+            Client about this claim</a>
+        </div>
+        <!-- CLaim circumstances-->
+        <div class="row">
+          <div class="col s12 ">
+            <h5 class="underline">Circumstances</h5>
+            <p>{{ claim.circumstances }}</p>
+          </div>
+          <div class="row">
+            <div class="col s12 m6">
+              <span class="detsGap">Liability: </span><span>{{ claim.liability }}</span><br>
+            </div>
+          </div>
+          <!--Client's vehcile details-->
+          <div class="row">
+            <div class="col s12 m6">
+              <h5 class="underline">Vehicle Details</h5>
+              <span class="detsGap">Registration: </span><span>{{ claim.registration }}</span><br>
+              <span class="detsGap">Make and Model: </span><span>{{ claim.make_and_model }}</span><br>
+              <span class="detsGap">Claiming for Own Damage?</span><span>{{ claim.any_ad }}</span><br>
+            </div>
+            <!--third party detaisl-->
+            <div class="row">
+              <div class="col s12 m6">
+                <h5 class="underline">Third Party Details</h5>
+                <span class="detsGap">TP Driver: </span><span>{{ claim.tp_name }}</span><br>
+                <span class="detsGap">TP Vehicle: </span><span>{{ claim.tp_reg }}</span><br>
+                <span class="detsGap">Contact Number:</span> <a
+                  href="tel:{{ claim.tp_number }}">{{ claim.tp_number }}</a><br>
+                <span class="detsGap">TP Email:</span> <a href="tel:{{ claim.tp_email }}">{{ claim.email }}</a><br>
+                <span class="detsGap">Address:</span><span></span><br>
+                <span class="detsGap">No. of People in TP vehicle:</span>
+                <span>{{ claim.tp_passnagers }}</span><br>
               </div>
-              <div class="collapsible-body">
-                <div class="row">
-             <!-- Buttone to edit and delete claim-->
-                  <div class="col s12 m6 center-align">
-                    {% if session.user|lower == claim.created_by|lower %}
-                    <a href="{{ url_for('editclaim', claim_id=claim._id) }}" class="btn-small light-blue lighten-1">Edit
-                      Claim</a>
-                  </div>
-                  <div class="col s6 center-align">
-                    <a href="{{ url_for('delete_claim', claim_id=claim._id) }}" class="btn-small green accent-4">Delete
-                      Claim</a>
-                    {% endif %}
-                  </div>
-                </div>
-                <div class="row">
-                  <!--contact detaisl for client-->
-                  <div class="col s12">
-                    <span class="detsGap">Contact Number: </span><a
-                      href="tel:{{ claim.contact_number }}">{{ claim.contact_number }}</a><br>
-                    <span class="detsGap">Contact Email: </span><a
-                      href="mailto:{{ claim.email_address }}">{{ claim.email_address }}</a><br>
-                    <a
-                      href="mailto:{{ claim.email_address }}?subject={{ claim.registration }} {{ claim.incident_date }} {{ claim.driver_name }}">Email
-                      is linked here.</a>
-                  </div>
-                  <!-- CLaim circumstances-->
-                  <div class="row">
-                    <div class="col s12 ">
-                      <h5 class="underline">Circumstances</h5>
-                      <p>{{ claim.circumstances }}</p>
-                    </div>
-                    <div class="row">
-                      <div class="col s12 m6">
-                        <span class="detsGap">Liability: </span><span>{{ claim.liability }}</span><br>
-                      </div>
-                    </div>
-                    <!--Client's vehcile details-->
-                    <div class="row">
-                      <div class="col s12 m6">
-                        <h5 class="underline">Vehicle Details</h5>
-                        <span class="detsGap">Registration: </span><span>{{ claim.registration }}</span><br>
-                        <span class="detsGap">Make and Model: </span><span>{{ claim.make_and_model }}</span><br>
-                        <span class="detsGap">Claiming for Own Damage?</span><span>{{ claim.any_ad }}</span><br>
-                      </div>
-                      <!--third party detaisl-->
-                      <div class="row">
-                        <div class="col s12 m6">
-                          <h5 class="underline">Third Party Details</h5>
-                          <span class="detsGap">TP Driver: </span><span>{{ claim.tp_name }}</span><br>
-                          <span class="detsGap">TP Vehicle: </span><span>{{ claim.tp_reg }}</span><br>
-                          <span class="detsGap">Contact Number:</span> <a
-                            href="tel:{{ claim.tp_number }}">{{ claim.tp_number }}</a><br>
-                          <span class="detsGap">TP Email:</span> <a
-                            href="tel:{{ claim.tp_email }}">{{ claim.email }}</a><br>
-                          <span class="detsGap">Address:</span><span></span><br>
-                          <span class="detsGap">No. of People in TP
-                            vehicle:</span><span>{{ claim.tp_passnagers }}</span><br>
-                        </div>
-                        <!--Client's driver details-->
-                        <div class="col s12 m6">
-                          <h5 class="underline">Our Driver's Details</h5>
-                          <span class="detsGap">Driver's Name: </span><span>{{ claim.driver_name }}</span><br>
-                          <span class="detsGap">Date of Birth: </span><span>{{ claim.dob }}</span><br>
-                          <span class="detsGap">Licence Type: </span><span>{{ claim.lic_held }}</span><br>
-                          <span class="detsGap">Date relevent Test Passed:
-                          </span><span>{{ claim.date_lic_passed }}</span><br>
-                          <span class="detsGap">Any Points:</span><span>{{ claim.any_points }}</span><br>
-                          <span class="detsGap">Any Medical
-                            Conditions:</span><span>{{ claim.medical_conditoins }}</span><br>
-
-                        </div>
-                      </div>
-                      <div class="row">
-                        <!--claims costs-->
-                        <div class="col s12">
-                          <p>
-                            <h5 class="underline">Claims Costs</h5>
-                          </p>
-                        </div>
-                        <div class="row">
-                          <div class="col s4">
-                            <span>Total Reserve:</span>
-                          </div>
-
-                          <div class="col s4">
-                            <span>Total Paid: </span>
-                          </div>
-
-                          <div class="col s4">
-                            <span>Total Cost: </span>
-                          </div>
-                        </div>
-                      </div>
-            </li>
+              <!--Client's driver details-->
+              <div class="col s12 m6">
+                <h5 class="underline">Our Driver's Details</h5>
+                <span class="detsGap">Driver's Name: </span><span>{{ claim.driver_name }}</span><br>
+                <span class="detsGap">Date of Birth: </span><span>{{ claim.dob }}</span><br>
+                <span class="detsGap">Licence Type: </span><span>{{ claim.lic_held }}</span><br>
+                <span class="detsGap">Date relevent Test Passed:</span><span>{{ claim.date_lic_passed }}</span><br>
+                <span class="detsGap">Any Points:</span><span>{{ claim.any_points }}</span><br>
+                <span class="detsGap">Any Medical Conditions:</span><span>{{ claim.medical_conditoins }}</span><br>
+              </div>
+            </div>
             
-            {% endfor %}  
-          </ul>
-         
+  </li>
+
+  {% endfor %}
+</ul>
+
 {% endblock %}
