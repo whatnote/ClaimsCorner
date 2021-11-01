@@ -104,7 +104,8 @@ The font I've used is Lato, if works well when small, making it ideal for use on
 
  - Include a MI facility, give the client a graphical presentation of their claims data.
  - Add financials of claims costs. 
- 
+ - specific login for "Admin" "Claims Handler" and "Client" at the moment the client and and broker staff member has full access to the portal.
+  
 
 ## Technologies-Used
 
@@ -224,6 +225,8 @@ The wibesite was set up as a mbile first website, the materialize classes are ex
 
 ### Additional-Testing
 
+#### Contact Form.
+
 To Test the contact form:
 
 Open the modal and enter the message:
@@ -238,18 +241,9 @@ This message is received by the developer.
 This email is sent to the client. 
 ![Ackknowledgement to client](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/AckEmail.png)
 
-
-#### Contact Form.
-
-
-
-I entered my details pressed send and then checked my email for the message.
-
-![EmailJS Test](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/WriteUpPics/emailJStest.png)
-
 ### HTML-And-CSS-Validation
 
-I used the website, https://validator.w3.org/#validate_by_input, to check my html code. It show three warning, 
+I used the website, https://validator.w3.org/#validate_by_input, to check my html code. There are serverl erros and warning shown but all these relate to the jinja template notation so were ignored. 
 
 ![Image of html test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/htmlTest.jpg)
 

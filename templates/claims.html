@@ -43,7 +43,7 @@
           {% endif %}
         </div>
       </div>
-      <!--contact detaisl for client-->
+      <!--contact details for client-->
       <div class="row">      
         <div class="col s12">
           <span class="detsGap">Contact Number: </span><a
@@ -54,6 +54,7 @@
             href="mailto:{{ claim.email_address }}?subject={{ claim.registration }} - {{ claim.incident_date }} - {{ claim.driver_name }}">Email
             Client about this claim</a>
         </div>
+      </div>  
         <!-- CLaim circumstances-->
         <div class="row">
           <div class="col s12 ">
@@ -65,6 +66,7 @@
               <span class="detsGap">Liability: </span><span>{{ claim.liability }}</span><br>
             </div>
           </div>
+        </div>
           <!--Client's vehcile details-->
           <div class="row">
             <div class="col s12 m6">
@@ -73,10 +75,11 @@
               <span class="detsGap">Make and Model: </span><span>{{ claim.make_and_model }}</span><br>
               <span class="detsGap">Claiming for Own Damage?</span><span>{{ claim.any_ad }}</span><br>
             </div>
+          </div>  
             <!--third party detaisl-->
-            <div class="row">
-              <div class="col s12 m6">
-                <h5 class="underline">Third Party Details</h5>
+          <div class="row">
+            <div class="col s12 m6">
+              <h5 class="underline">Third Party Details</h5>
                 <span class="detsGap">TP Driver: </span><span>{{ claim.tp_name }}</span><br>
                 <span class="detsGap">TP Vehicle: </span><span>{{ claim.tp_reg }}</span><br>
                 <span class="detsGap">Contact Number:</span> <a
@@ -85,21 +88,20 @@
                 <span class="detsGap">Address:</span><span></span><br>
                 <span class="detsGap">No. of People in TP vehicle:</span>
                 <span>{{ claim.tp_passnagers }}</span><br>
-              </div>
-              <!--Client's driver details-->
-              <div class="col s12 m6">
-                <h5 class="underline">Our Driver's Details</h5>
+            </div>
+            <!--Client's driver details-->
+            <div class="col s12 m6">
+              <h5 class="underline">Our Driver's Details</h5>
                 <span class="detsGap">Driver's Name: </span><span>{{ claim.driver_name }}</span><br>
                 <span class="detsGap">Date of Birth: </span><span>{{ claim.dob }}</span><br>
                 <span class="detsGap">Licence Type: </span><span>{{ claim.lic_held }}</span><br>
                 <span class="detsGap">Date relevent Test Passed:</span><span>{{ claim.date_lic_passed }}</span><br>
                 <span class="detsGap">Any Points:</span><span>{{ claim.any_points }}</span><br>
                 <span class="detsGap">Any Medical Conditions:</span><span>{{ claim.medical_conditoins }}</span><br>
-              </div>
             </div>
-            
+          </div>
+    </div>           
   </li>
-
   {% endfor %}
 </ul>
 
