@@ -334,7 +334,7 @@ As this is a python code running in the file you'll need to deploy it via Heroku
 8. Goto Setting and click on reveal config Var, 
 9. Enter the details
 
-[Config Var](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/Deployment/config var.png)
+[Config Var](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/Deployment/config%20var.png)
 
   - The secret key is the one you picked. 
   - MongoDB URI is found in your MongoDB. 
