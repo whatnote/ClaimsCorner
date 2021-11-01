@@ -256,9 +256,6 @@ I used the website PEP8 online (http://pep8online.com/checkresult) to test the p
 ![Image of Python3 PEP8 Test test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/Python3Test.jpg)
 
 
-### Interesting-Bugs-Or-Problems
-
-
 
 ## Deployment
 
@@ -296,7 +293,7 @@ To Run Local
 
 - users ![user](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/Deployment/usersdb.png)
 
-13. Now create a env.py file
+13. Now create a env.py file 
 
 enther the following code:
 
@@ -315,16 +312,30 @@ os.environ.setdefault("MONGO_DBNAME", "value")
 
 14. the Ip value is 0.0.0.0, the port is 5000, for secret key make up your own password or use radom key gen, noted in the technologies used. The MONGO_URI and MONGO_BDNAME are to be found in you MongoDB account. 
 
+in the csae the mongoDB is called claim_corner
+
+
+
 15. create a .gitignore file type, open it and ender the file name env.py
 
 16. you can now run the program the typing python3 app.py in the CLI. 
 
 
 As this is a python code running in the file you'll need to deploy it via Heroku. 
-1. in the CLI create a requirements file : pip freeze --local >requirements 
-2. create a Procfile with the command : echo web: python app.py >Procfile
-3. open an heruko account. 
-4. create a new app 
+1. In the CLI create a requirements file : pip freeze --local >requirements 
+2. Create a Procfile with the command : echo web: python app.py >Procfile
+3. Open an heruko account. 
+4. Create a new app 
+  - the name needs to bu unique! 
+  - choose the location nearestto you, I chose Europe and I'm based in England. 
+5. Then click on the delpoy tab.
+6. Claim on GitHub
+7. Then connect it to your repository. 
+8. Goto Setting and click on reveal config Var, 
+9. Enter the details
+
+[Config Var](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/Deployment/config var.png)
+
 
 
 ### Repository Link
