@@ -272,6 +272,7 @@ Deployment the Live Version
 3. click on the repositories [Whatnote's Repo](https://github.com/whatnote/ClaimsCorner)
 4. click on Claims Corner
 5. click on the link, https://claims-corner.herokuapp.com/ to the rightcentre highlighted with green. 
+[]()
 
 
 To Run Local
