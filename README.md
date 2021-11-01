@@ -272,7 +272,7 @@ Deployment the Live Version
 3. click on the repositories [Whatnote's Repo](https://github.com/whatnote/ClaimsCorner)
 4. click on Claims Corner
 5. click on the link, https://claims-corner.herokuapp.com/ to the rightcentre highlighted with green. 
-[]()
+[Live Deployement Link:](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/Deployment/livedeployment.jpg)
 
 
 To Run Local
@@ -281,6 +281,23 @@ To Run Local
 3. click on the repositories [Whatnote's Repo](https://github.com/whatnote/ClaimsCorner)
 4. click on Claims Corner
 5. Now click on code
+[Live Deployement Link:](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/Deployment/localdeployment.jpg)
+6. Then click on the copy icon. 
+7. open your favourite IDE, then open the CLI. 
+8. Enter the command: git clone https://github.com/whatnote/ClaimsCorner.git
+9. pressing enter will create a clone
+10. Now jump to your mongoDB account. 
+11. create a new cluster and new database name the database "claim_corner"
+12. Next create the collections and fill them in like this. 
+
+- claimForm [claimForm]()
+
+- liability [liability]()
+
+- users [user]()
+
+
+
 
 
 ### Repository Link
