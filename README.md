@@ -194,19 +194,24 @@ The website has the following features:
 - LogOn Function
 ![Logon test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/LogonTest.jpg)
 - Able to Add new claims.
-- Able to edit new claim
-- Able to delete claims
+![New Claim test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/newClaimTest.jpg)
+
+- Able to edit claims and Delete
+![New Claim test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/claimEditDeleteclaimTest.jpg)
+
 - Search feature: 
   - able to seatch for claims via their:
     - registration
     - driver's name
     - Third party's registration
+![New Claim test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/search.jpg)
+
 - Contact feature: Client is able to contact for assistnace via:
     - whatsapp
     - telephone
     - or via a contact form. 
 
-
+![New Claim test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/contact.jpg)
 
 ### Responsive-Testing
 
