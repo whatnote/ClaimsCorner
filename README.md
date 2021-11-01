@@ -27,8 +27,7 @@
   - [Running Code Locally](#Running-Code-Locally)
 - [**Credits**](#Credits)
   - [Content](#Content)
-  - [Media](#Media)
-    - [Pictures](#Pictures)
+    
   - [Acknowledgements](#Acknowledgements)
   - [Disclaimer](#Disclaimer)
 
@@ -103,8 +102,8 @@ The font I've used is Lato, if works well when small, making it ideal for use on
 
 ### Features-Left-To-Implement
 
- - include a MI facility, give the client a graphical presentation of their claims data.
- - add financials of claims costs. 
+ - Include a MI facility, give the client a graphical presentation of their claims data.
+ - Add financials of claims costs. 
  
 
 ## Technologies-Used
@@ -188,47 +187,32 @@ The font I've used is Lato, if works well when small, making it ideal for use on
 
 ### Testing-User-Stories
 
-- I want a play button.
-  ![Desktop Home Screen ](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/wireframes/Desktop%20Home%20Screen.png)
+The website has the following features:
 
-- I want a large deck of cards.
+- Register Function
+![register test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/RegisterTest.jpg)
+- LogOn Function
+![Logon test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/LogonTest.jpg)
+- Able to Add new claims.
+- Able to edit new claim
+- Able to delete claims
+- Search feature: 
+  - able to seatch for claims via their:
+    - registration
+    - driver's name
+    - Third party's registration
+- Contact feature: Client is able to contact for assistnace via:
+    - whatsapp
+    - telephone
+    - or via a contact form. 
 
-The deck consists of 42 cards, more can be added with the add card page.
 
-- I’d prefer not to have war events.
-
-No War events included.
-
-- I want the draw to be random.
-
-Using the math function the array is shuffled at random at the start of every game.
-
-![JS math](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/WriteUpPics/shuffle.png)
-
-- I want short snappy game, no more than 10 cards in normal mode.
-
-Game in completed in 10 moves.
-
-- I want more than just the year of the event, more info and more information.
-  ![More Info button](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/WriteUpPics/moreInfo.png)
-
-- I want a play again button.
-
-Play again button.
-
-- I want a scoreboard.
-
-Scoreboard at the top of the page shows the current score
-
-- I want to be able to request a new card is added to the deck.
-
-![New Card](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/WriteUpPics/addCard.png)
 
 ### Responsive-Testing
 
-The wibesite was set up as a mbile first website, the materialize class are excelement at re-scalling withouth the need to and array of @media queries. 
+The wibesite was set up as a mbile first website, the materialize classes are excelement at re-scalling withouth the need to and array of @media queries. 
 
-#### Web Browser and DEvice Testing
+#### Web Browser and Device Testing
 
 ![Web Browser and DEvices Testing](https://github.com/whatnote/ms2historybeforeorafter/blob/master/assets/WriteUpPics/devices%20and%20webbrowser%20tests.png)
 
@@ -251,11 +235,15 @@ I used the website, https://validator.w3.org/#validate_by_input, to check my htm
 I used the website. https://jigsaw.w3.org/css-validator/, to check the code for my CSS, fortunatley it showed no errors.
 ![Image of css test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/htmlTest.jpg)
 
+### Python Testing
+
+I used the website PEP8 online (http://pep8online.com/checkresult) to test the python code. 
+![Image of Python3 PEP8 Test test](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/Python3Test.jpg)
+
+
 ### Interesting-Bugs-Or-Problems
 
-Not a bug as such, but something that took me far too long to work out! It was getting the card below/right of the question top/left to display as the second card in the array, it was a very easy fix in the end, I should have asked somebody...
 
-Simply all I had to do was change count to count++ and that as that.
 
 ## Deployment
 
@@ -263,15 +251,9 @@ Gitpod was used to devleoped the site, with progress being comitted to git via t
 
 ### Deployment of Page
 
-- Log onto GitHub
-- Go to the “repositories” section
-- Click: claimscorner
-- Click on "settings" located in the right handside, sort of in the middle of the screen.
-- Click on “Pages” on the left handside menu
-- Under “Source”, select “Master” in the first tab
-- In the next tab, select “/root” if not already selected by default
-- Click “Save” and the url should be displayed above the "source" section
-- Now that the link is displayed, the website is deployed and can be accessed in the browser by clicking on the url
+
+
+
 
 ### Repository Link
 
@@ -289,11 +271,9 @@ The link to my repository can be found via this link:
 - Use "git clone" and paste the copied URL after it.
 - A clone of the project will be created locally on your machine.
 
-## Credits
-
 ### Content
 
-- a lot of the code for project was lifted from the putting it all together from the [Backend Developenment course from the CODE Institute](https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopment), 
+- A lot of the code for project was lifted from the putting it all together from the [Backend Developenment course from the CODE Institute](https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopment), 
   Particularly the:
 
   -  register 
@@ -311,7 +291,6 @@ In these particulary cases the code was amended to suite to the requirement of t
 
 the email connenction was lifted from the codeinstitute course. 
 #### Putting it all toghter - Sending email using emailJS [link to course here](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+IFD101+2017_T3/courseware/03d3f6524ad249d9b33e3336d156dfd0/e4710f80cdf34bffbd607bc102482d5c/)
-
 
 
 ## Acknowledgements
