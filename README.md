@@ -227,16 +227,16 @@ The wibesite was set up as a mbile first website, the materialize classes are ex
 To Test the contact form:
 
 Open the modal and enter the message:
-![Message in Modal](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/devices%20and%20webbrowser%20tests.png)
+![Message in Modal](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/messageInModal.jpg)
 
 When you press send, the message disappears. 
 
 This message is received by the developer. 
-![messager to developer](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/devices%20and%20webbrowser%20tests.png)
+![messager to developer](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/messageReceivedTest.jpg)
 
 
 This email is sent to the client. 
-![Ackknowledgement to client](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/devices%20and%20webbrowser%20tests.png)
+![Ackknowledgement to client](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/testing/AckEmail.png)
 
 
 #### Contact Form.
