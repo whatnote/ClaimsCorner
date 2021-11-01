@@ -339,7 +339,7 @@ As this is a python code running in the file you'll need to deploy it via Heroku
   - The secret key is the one you picked. 
   - MongoDB URI is found in your MongoDB. 
 
-10. Click on enbale Automatoc DEploys and the deploy branch.  this will take a short while to work through.
+10. Click on enbale Automatic Deploys and the Deploy Branch buttons; this will take a short while to work through.
 
 11. you can then view the deloyped link.
 
