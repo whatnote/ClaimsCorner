@@ -281,7 +281,7 @@ To Run Local
 3. click on the repositories [Whatnote's Repo](https://github.com/whatnote/ClaimsCorner)
 4. click on Claims Corner
 5. Now click on code
-![Live Deployement Link:](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/Deployment/livedeployment.jpg)
+![Live Deployement Link:](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/Deployment/localdeployment.jpg)
 6. Then click on the copy icon. 
 7. open your favourite IDE, then open the CLI. 
 8. Enter the command: git clone https://github.com/whatnote/ClaimsCorner.git
@@ -296,8 +296,35 @@ To Run Local
 
 - users ![user](https://github.com/whatnote/ClaimsCorner/blob/main/writeUpFilePictures/Deployment/usersdb.png)
 
+13. Now create a env.py file
+
+enther the following code:
+
+import os
+
+os.environ.setdefault("IP", "value")
+
+os.environ.setdefault("PORT", "value")
+
+os.environ.setdefault("SECRET_KEY", "value")
+
+os.environ.setdefault("MONGO_URI", "value")
+
+os.environ.setdefault("MONGO_DBNAME", "value")
 
 
+14. the Ip value is 0.0.0.0, the port is 5000, for secret key make up your own password or use radom key gen, noted in the technologies used. The MONGO_URI and MONGO_BDNAME are to be found in you MongoDB account. 
+
+15. create a .gitignore file type, open it and ender the file name env.py
+
+16. you can now run the program the typing python3 app.py in the CLI. 
+
+
+As this is a python code running in the file you'll need to deploy it via Heroku. 
+1. in the CLI create a requirements file : pip freeze --local >requirements 
+2. create a Procfile with the command : echo web: python app.py >Procfile
+3. open an heruko account. 
+4. create a new app 
 
 
 ### Repository Link
