@@ -104,6 +104,8 @@ The font I've used is Lato, if works well when small, making it ideal for use on
 ### Features-Left-To-Implement
 
  - include a MI facility, give the client a graphical presentation of their claims data.
+ - add financials of claims costs. 
+ 
 
 ## Technologies-Used
 
@@ -263,7 +265,7 @@ Gitpod was used to devleoped the site, with progress being comitted to git via t
 
 - Log onto GitHub
 - Go to the “repositories” section
-- Click: ms2historybeforeorafter
+- Click: claimscorner
 - Click on "settings" located in the right handside, sort of in the middle of the screen.
 - Click on “Pages” on the left handside menu
 - Under “Source”, select “Master” in the first tab
@@ -273,10 +275,10 @@ Gitpod was used to devleoped the site, with progress being comitted to git via t
 
 ### Repository Link
 
-To run the game in a live environment [click here](https://whatnote.github.io/ms2historybeforeorafter/)
+To run the game in a live environment [click here](http://claims-corner.herokuapp.com/login)
 
 The link to my repository can be found via this link:
-[Link to Repository](https://github.com/whatnote/ms2historybeforeorafter)
+[Link to Repository](https://github.com/whatnote/ClaimsCorner)
 
 ### Running-Code-Locally
 
